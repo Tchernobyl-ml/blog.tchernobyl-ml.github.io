@@ -43,8 +43,8 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&#8217;est très simple, je ne&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&rsquo;est très simple, je ne peux tout simplement pas utiliser un navigateur si je n&rsquo;ai pas de bloqueur de pub d&rsquo;installé !</p>
-<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation :)</figcaption>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
-<p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones :) ).</p>
+<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation 🤠</figcaption>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
+<p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones 🤠 ).</p>
 <p>Si vous pensez comme moi, alors vous êtes à la bonne adresse, car aujourd&rsquo;hui, je vous propose ce petit tuto <a href="https://blog.tchernobyl.ml/category/diy/">DIY</a> afin d&rsquo;en finir définitivement avec les pubs chez vous ou à votre lieu de travail.</p>
 <h3>Ingrédients : </h3>
 <p>&#8211; un Raspberry Pi 🍓 (désolé il n&rsquo;y avait plus d&#8217;emojis framboise)<br />
@@ -61,12 +61,12 @@ ssh pi@[ADRESSE_LOCALE_RASPBERRY]
 </pre>
 <p>puis en mot en de passe : « raspberry »</p>
 <p>ou via Putty pour les plus Windowsiens</p>
-<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de :) </figcaption>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
+<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de 🤠 </figcaption>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
 <pre>
 pi@raspberry:~ $ passwd
 Mot de passe actuel : "raspberry"
 Nouveau mot de passe : [N'IMPORTE_QUOI_MAIS_PAS_"raspberry" !!]
-Confirmation du mot de passe : [le même mot de passe que précédement entré :) ]
+Confirmation du mot de passe : [le même mot de passe que précédement entré 🤠 ]
 </pre>
 <p>À présent il est temps de parler de la solution que j&rsquo;ai choisi : « Pi-Hole ». Il s&rsquo;agit d&rsquo;une solution Open-Source, ultra simpliste comme toujours et qui permet de régler notre souci de publicité d&rsquo;une manière aussi intuitive qu&rsquo;efficace. En effet, une fois que l&rsquo;on aura mis en place la solution, le Raspberry jouera le rôle de « filtre ». </p>
 <p>L&rsquo;installation de Pi-Hole est ultra simpliste : </p>
@@ -74,7 +74,7 @@ Confirmation du mot de passe : [le même mot de passe que précédement entré :
 pi@raspberry:~ $ curl -sSL https://install.pi-hole.net | bash
 </pre>
 <p>le script devrait se lancer :</p>
-<p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS :)<br />
+<p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
 <img src="https://i.imgur.com/wnfcdov.png" /></p>
 <p>Une fois l&rsquo;installation terminée, l&rsquo;adresse d&rsquo;une page d&rsquo;administration ainsi que votre mot de passe pour y accéder vous sont donnés, retenez le mot de passe ! Si vous préférez un autre mot de passe, vous pouvez toujours le changez via la commande : </p>
 <pre>
@@ -108,18 +108,18 @@ pi@raspberry:~ $ sudo pihole -a -p
 		<category><![CDATA[Vie Privée]]></category>
 
 		<guid isPermaLink="false">https://blog.tchernobyl.ml/?p=1180</guid>
-				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Si comme moi, vous habitez dans une grotte, sachez que Microsoft va arrêter le développement de Skype ! Quand Microsoft l&#8217;a annoncé en douce :) Je&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/fun/wire-comme-bonne-alternative-a-skype/" class="btn btn-primary btn-effect"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
+				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Si comme moi, vous habitez dans une grotte, sachez que Microsoft va arrêter le développement de Skype ! Quand Microsoft l&#8217;a annoncé en douce 🤠 Je&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/fun/wire-comme-bonne-alternative-a-skype/" class="btn btn-primary btn-effect"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde,</p>
 <p>Si comme moi, vous habitez dans une grotte, sachez que Microsoft va arrêter le développement de Skype !</p>
-<p><img src="https://media.giphy.com/media/joV1k1sNOT5xC/giphy.gif" alt="skype"><figcaption>Quand Microsoft l&rsquo;a annoncé en douce :) </figcaption>Je suis conscient que certains ne vont même pas voir l&rsquo;utilité pour moi d&rsquo;en faire un article mais pour les autres (et j&rsquo;en connais un sacré paquet !) qui ne peuvent pas imaginer le mot « Visioconférence » rimer avec autre chose que Skype, j&rsquo;ai quelque chose qui pourrait vous intéresser :</p>
+<p><img src="https://media.giphy.com/media/joV1k1sNOT5xC/giphy.gif" alt="skype"><figcaption>Quand Microsoft l&rsquo;a annoncé en douce 🤠 </figcaption>Je suis conscient que certains ne vont même pas voir l&rsquo;utilité pour moi d&rsquo;en faire un article mais pour les autres (et j&rsquo;en connais un sacré paquet !) qui ne peuvent pas imaginer le mot « Visioconférence » rimer avec autre chose que Skype, j&rsquo;ai quelque chose qui pourrait vous intéresser :</p>
 <h3>Wire</h3>
 <h3>1°) Qu&rsquo;est-ce que c&rsquo;est ?</h3>
 <p>Wire est avant tout une entreprise, il ne s&rsquo;agit donc pas de pauvres gus qui codent dans leur coin une alternative à skype. Wire est donc aussi un logiciel totalement Open Source et multiplateforme, ce qui veut dire que vous pouvez très bien installer l&rsquo;appli sur Linux, Mac OS, Android, IOS ou même Windows. Mais avant de l&rsquo;installer, il y a plusieurs « plan » (ou tarifs) un peu comme slack pour ceux qui connaissent. Vous pouvez donc créer deux sortes de compte sur le site « business » (payant) ou « personal » (gratuit), un mail et un mot de passe suffisent largement pour créer un compte personal.</p>
-<p><img src="https://media.giphy.com/media/3o7TKrugYn6cXQAMTK/giphy.gif" alt="applaudissement"><figcaption>Il faut l&rsquo;admettre, c&rsquo;est une belle prouesse :)</figcaption><h3>2°) Fonctionnalités</h3>
+<p><img src="https://media.giphy.com/media/3o7TKrugYn6cXQAMTK/giphy.gif" alt="applaudissement"><figcaption>Il faut l&rsquo;admettre, c&rsquo;est une belle prouesse 🤠</figcaption><h3>2°) Fonctionnalités</h3>
 <p>Une fois que votre compte est créé et que l&rsquo;appli est installée, il n&rsquo;y a plus grand-chose à faire :</p>
-<p><img src="https://gigaom2.files.wordpress.com/2014/12/wire-screenshot-2.jpeg" alt="macos"><figcaption>Wire sur Mac OS :)</figcaption>Vous pouvez maintenant tout comme sur skype, créer des groupes de conversation, ajouter des personnes en ami, partager votre écran ou votre caméra, partager des images, &#8230; Le tout sans avoir ce sentiment d&rsquo;être constamment sur écoute par la NSA ou n&rsquo;importe quel autre tue-la-vie-privée. En effet, toutes les communications sont chiffrées de bout en bout ! Ce qui veut dire qu&rsquo;à part la personne avec qui vous discutez, personne ne saura que votre chien s&rsquo;appelle Médor, et même pas Wire !</p>
+<p><img src="https://gigaom2.files.wordpress.com/2014/12/wire-screenshot-2.jpeg" alt="macos"><figcaption>Wire sur Mac OS 🤠</figcaption>Vous pouvez maintenant tout comme sur skype, créer des groupes de conversation, ajouter des personnes en ami, partager votre écran ou votre caméra, partager des images, &#8230; Le tout sans avoir ce sentiment d&rsquo;être constamment sur écoute par la NSA ou n&rsquo;importe quel autre tue-la-vie-privée. En effet, toutes les communications sont chiffrées de bout en bout ! Ce qui veut dire qu&rsquo;à part la personne avec qui vous discutez, personne ne saura que votre chien s&rsquo;appelle Médor, et même pas Wire !</p>
 <p>Et comme si ça ne suffisait pas, Wire n&#8217;embarque AUCUNE pub (oui, oui c&rsquo;est possible).</p>
-<p><img src="https://media.giphy.com/media/5VKbvrjxpVJCM/giphy.gif" alt="macos"><figcaption>La tête épique que j&rsquo;ai faite quand j&rsquo;ai vu qu&rsquo;il n&rsquo;y avait pas l&rsquo;ombre d&rsquo;une pub :)</figcaption><h3>3°) Verdict</h3>
+<p><img src="https://media.giphy.com/media/5VKbvrjxpVJCM/giphy.gif" alt="macos"><figcaption>La tête épique que j&rsquo;ai faite quand j&rsquo;ai vu qu&rsquo;il n&rsquo;y avait pas l&rsquo;ombre d&rsquo;une pub 🤠</figcaption><h3>3°) Verdict</h3>
 <p>Vous l&rsquo;avez peut-être compris, je suis totalement sous le charme de ce petit logiciel. J&rsquo;ai honnêtement essayé une foulée d&rsquo;alternatives à Skype ou même à Discord (oui, oui c&rsquo;est possible), mais à chaque fois il y avait quelque chose qui n&rsquo;allait pas. Sauf pour Wire, où tout fonctionne super, la qualité de l&rsquo;audio, le design, tout est au top !</p>
 <p>Voili, voilou, on ne change pas les bonnes habitudes, j&rsquo;espère que cet article vous a plu, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis et évidemment à faire votre propre idée sur le sujet.</p>
 <p>D&rsquo;ici là, portez-vous bien, buvez de l&rsquo;eau car l&rsquo;eau c&rsquo;est la vie et à bientôt tout le monde !</p>
@@ -158,7 +158,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>S&rsquo;il s&rsquo;agit de l&rsquo;image en HTTP, cela peut vouloir dire que votre FAI prends un malin plaisir à manipuler les images afin de réduire leur taille (et bafoue au passage le principe de neutralité du net 😠).</p>
 <p><img src="https://media.giphy.com/media/1236TCtX5dsGEo/giphy.gif" alt="Bravo!"></p>
 <p>Si en revanche il s&rsquo;agit de l&rsquo;image en HTTPS, alors courez vite débrancher / rebrancher votre Box internet et refaites le test car c&rsquo;est sûrement le signe qu&rsquo;on écoute votre connexion internet 😰 !!!</p>
-<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figcaption>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » :)</figcaption>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
+<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figcaption>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figcaption>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
 <pre>
 [✓] IMAGE_HTTP:     43 225
 |✓] IMAGE_HTTPS:    43 225
@@ -166,7 +166,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 [✓] Le FAI est neutre !
 
 </pre>
-<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figcaption>Oui, j&rsquo;ai dansé comme ça dans ma chambre :) </figcaption>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
+<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figcaption>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figcaption>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
 <p>Voili, voilou, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis pour qu&rsquo;on connaisse un peu l&rsquo;état des lieux de la neutralité du net en Europe (ou ailleurs !) en 2019. Ça peut être aussi une très belle occasion pour prendre conscience de la sûreté de sa connexion (surtout si on se rend compte qu&rsquo;on est sur écoute !).</p>
 <p>d&rsquo;ici là portez vous bien, buvez de l&rsquo;eau et à bientôt tout le monde !</p>
 <p><img src="https://i.imgur.com/ehlPHlP.jpg" alt="neutralité"></p>
@@ -190,7 +190,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? Si vous avez répondu à haute voix (ou&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/drama-alert/enquete-campagne-russe-de-phishing-via-sms-sur-leboncoin/" class="btn btn-primary btn-effect"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? </p>
-<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille :)</p>
+<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille 🤠</p>
 <p>Internet est vaste et rempli de tous pleins de mystères. Et c&rsquo;est justement ce côté mystérieux qui me passionne. Vous comprenez donc que lorsque l&rsquo;on me tend un billet express pour découvrir les coulisses d&rsquo;une attaque (surtout comme celle-ci) je ne réfléchis pas deux fois !</p>
 <h3>1°) Le Contexte</h3>
 <p>Récement un de mes amis qui avait mis en vente un objet sur le leboncoin avait reçu un SMS lui notifiant qu&rsquo;il avait bien reçu le prépaiement de l&rsquo;objet en question.</p>
@@ -206,13 +206,13 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p> <img src="https://img1.koplayer.com/ScreenShot/com.antivirus/corwdYPO6EJ0GSM0-KSfKDDvF6aleCuEP93xqz2MryFdh7A3dKbupAcbMfoTZnKQ3jxc_50.png" /> </p>
 <p>Eh oui! Bien que troublante d&rsquo;ingéniosité sur de nombreux points, cette campagne tombe à l&rsquo;eau car nombreux sont à avoir reçu la notif mais peu sont allé juqu&rsquo;à tout faire pour avoir le petit fichier .apk installé sur leur téléphone.</p>
 <h3>2°) La charge utile (le fichier .apk)</h3>
-<p>Le fichier est très léger (pour une application :) ), pas plus de 300 Ko.<br />
+<p>Le fichier est très léger (pour une application 🤠 ), pas plus de 300 Ko.<br />
 Dès son execution, la fausse appli va se connecter au faux site afin que la victime puisse entrer ses coordonnées bancaires (bye bye les sous-sous).<br />
 Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Commande (C2C) va s&rsquo;opérer et via un fichier « gate.php », le serveur donne au zombie une sorte de mutex (en gros un identifiant, ex: 543759810537698240). </p>
 <p>Et c&rsquo;est là, que ça devient marrant: </p>
 <p>Les auteurs semblent avoir initialement prévu de s&rsquo;occuper d&rsquo;un botnet android via HTTP totalement soumis et dévoué à son C2C (serveur de Contrôle et de Commande). Le truc, c&rsquo;est que sur Android, il n&rsquo;y a pas vraiment de véritables moyens de persistance comme sur d&rsquo;autres systèmes :( . </p>
 <p>Par exemple, la permission d&rsquo;exécution en arrière-plan est choisie par l&rsquo;utilisateur lors de l&rsquo;installation et même si elle est activée, rien ne garantie que le démon (le service de l&rsquo;application) va bien se lancer de manière autonome après un redémarrage du téléphone. </p>
-<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri :) ) </p>
+<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri 🤠 ) </p>
 <p>Mais ne vous en faites pas, de ce côté les auteurs ont eu une idée de génie pour propager le malware (si si vraiment). Aller je vous donne un indice, voici les permissions que la fausse application demande au moment de l&rsquo;installation:</p>
 <pre>
     android.permission.CALL_PHONE          
@@ -249,7 +249,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <ul>
 <li>TOUS les virus ayant un lien avec cette organisation sont détectés par une vaste majorité d&rsquo;antivirus</li>
 <li>Les certificats sont auto-signés à l&rsquo;arrache (Ex: « CN:dddddddd fdfd » pour la backdoor leboncoin) alors qu&rsquo;ils ont des milliers de domaines</li>
-<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là :) </li>
+<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là 🤠 </li>
 <li>Certains codes sont des copiés collés de code retrouvé sur Github, Pastebin ou même StackOverflow (les crédits en moins)</li>
 <li>Il est très facile de remonter à leur serveur de Contrôle et de Commande </li>
 <li>Certains de leurs virus sont de véritables « call center » avec plus d&rsquo;une centaine d&rsquo;addresses IP différentes contactées dès les premières secondes de l&rsquo;exécution</li>
@@ -270,7 +270,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <p>En cherchant un peu on a même réussi à trouver une véritable vulnérabilité en or massif qui nous a permis de confirmer qu&rsquo;il s&rsquo;agissait d&rsquo;une solution totalement custom. Pour la petite histoire on a d&rsquo;ailleurs retrouvé des traces de précédentes installations (test ?) non fonctionnelles sur deux sites compromis d&rsquo;entreprises (1 américaine et 1 indienne).</p>
 <h3>3°) Verdict </h3>
 <p>Cette attaque a sur le papier largement de quoi effrayer de par sa sophistication (copie conforme des codes graphiques leboncoin, utilisation de la nouvelle fonctionnalité de prépaiement comme prétexte pour le phishing, relai SMS des victimes pour propager le malware &#8230;). Cependant, dans les faits, l&rsquo;attaque n&rsquo;ébranle pas forcément voire carrément pas du tout la communauté leboncoin.</p>
-<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas :) </p>
+<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas 🤠 </p>
 <p><u>TELEX:</u> en guise de contre-mesure simple mais efficace, pensez seulement à être plus attentif aux liens avant de cliquer directement.</p>
 <h3>Bonus: IOC&rsquo;s de la campagne </h3>
 <pre>
@@ -417,9 +417,9 @@ Au revoir!
 <p>Alors tout d&rsquo;abord, la première chose qui me choque là-dedans c&rsquo;est les fautes de français. Très sérieusement le fait qu&rsquo;il n&rsquo;y ait aucune faute de grammaire mais que syntaxiquement parlant tout soit à refaire indique très clairement qu&rsquo;il s&rsquo;agit d&rsquo;un mail copié collé directement de Google Traduction. On a donc affaire à une démonstration d&rsquo;attaque de masse.</p>
 <p>Ensuite, ce que je trouve plutôt « marrant » c&rsquo;est que l&rsquo;attaquant dit avoir réussi à pirater l&rsquo;appareil de la victime avec ici un RAT. Pour ceux qui ne savent pas ce que c&rsquo;est, je vous invite à jeter un petit coup d’œil à <a href="https://blog.tchernobyl.ml/systeme/les-r-a-t-ou-les-pires-arnaques-du-web/">mon article sur les RAT</a>. Le truc qui ne tient pas la route, c&rsquo;est qu&rsquo;aucun hacker ne serait assez stupide pour révéler à la victime comment il a fait pour en arriver là.</p>
 <p>C&rsquo;est typiquement ce qu&rsquo;en psychologie on appelle ça un argument d&rsquo;autorité: « je suis un hacker DONC je sais de quoi je parle »</p>
-<p>En effet, en disant à la victime, qui n&rsquo;y connaît d&rsquo;ailleurs pas grand-chose, pleins de mots très techniques sur comment il aurait pu faire pour la pirater donne du crédit au discours, donc au mail alors que je le répète AUCUN PIRATAGE N&rsquo;A EU LIEU (du moins aucun en rapport avec ce mail :) )</p>
+<p>En effet, en disant à la victime, qui n&rsquo;y connaît d&rsquo;ailleurs pas grand-chose, pleins de mots très techniques sur comment il aurait pu faire pour la pirater donne du crédit au discours, donc au mail alors que je le répète AUCUN PIRATAGE N&rsquo;A EU LIEU (du moins aucun en rapport avec ce mail 🤠 )</p>
 <h3>Que faire ?</h3>
-<p>Si votre mot de passe est divulgué dans le mail, changer le tout de suite ! À part ça, il ne faut A-B-S-O-L-U-M-E-N-T rien faire. En effet, il ne faut ni supprimer le mail (destruction de preuves :) ), ni chercher à répondre à l&rsquo;attaquant vous pourriez lui envoyer sans le vouloir de précieuses informations.</p>
+<p>Si votre mot de passe est divulgué dans le mail, changer le tout de suite ! À part ça, il ne faut A-B-S-O-L-U-M-E-N-T rien faire. En effet, il ne faut ni supprimer le mail (destruction de preuves 🤠 ), ni chercher à répondre à l&rsquo;attaquant vous pourriez lui envoyer sans le vouloir de précieuses informations.</p>
 <p><center><img class="alignnone size-full wp-image-1051" src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/everybody-is-being-hacked-while-im-just-sitting-here-doing-absolutely-nothing.jpg" alt="everybody-is-being-hacked-while-im-just-sitting-here-doing-absolutely-nothing" width="469" height="359" /></center></p>
 <h3>Qui sont les « hackers » ?</h3>
 <p>La suite logique serait maintenant de se demander qui est derrière tout ça. En vérité, il faut savoir que ce genre de campagne de mails malveillants que certains experts appellent d&rsquo;ailleurs « sextortion » est un phénomène relativement récent dans les internets français.</p>
@@ -427,7 +427,7 @@ Au revoir!
 <p>On peut donc penser que les auteurs ne sont pas les mêmes et que la dernière campagne est plus une réplique Eco+ de la première. De plus le fait que les pirates fassent autant de fautes de français indiquer clairement qu&rsquo;ils opèrent hors de l&rsquo;hexagone.</p>
 <h3>Conclusion</h3>
 <p>Cette dernière campagne de sextorsion indique très clairement que les pirates qui sont derrière tout ça ont très bien compris que l&rsquo;attaque pouvait être très lucrative.</p>
-<p>On peut donc imaginer voir de plus en plus de campagnes de chantages de ce genre par mails. C&rsquo;est pourquoi pour vaincre ce fléau il faut à tout prix éviter de financer ces véritables escrocs du net et sensibiliser son entourage. Profitez-en pour partager cet article à vos amis ou vos collègues :)</p>
+<p>On peut donc imaginer voir de plus en plus de campagnes de chantages de ce genre par mails. C&rsquo;est pourquoi pour vaincre ce fléau il faut à tout prix éviter de financer ces véritables escrocs du net et sensibiliser son entourage. Profitez-en pour partager cet article à vos amis ou vos collègues 🤠</p>
 <p>À très bientôt !</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/drama-alert/le-hacking-en-2019-les-mails-de-chantages-au-bitcoin/feed/</wfw:commentRss>
@@ -454,7 +454,7 @@ Au revoir!
 <p>Bien que ce logiciel ait été développé en 2008, il a néanmoins commencé à proliférer au début de l&rsquo;année 2012. Le developpement du logiciel fut annulé, partiellement à cause de son utilisation pendant la guerre civile syrienne pour surveiller des activistes, mais aussi car son créateur avait peur qu&rsquo;il soit arrêté.</p>
 <h3> Utilisation </h3>
 <p>Il est à noter que même si son developpement a été arrêté en juillet 2012, le logiciel est toujours largement utilisé en France comme le montre ces statistiques toutes fraîches que j&rsquo;ai concocté avec l&rsquo;aide de Shodan:</p>
-<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/test-1-800x600.jpg" alt="" width="800" height="600" class="alignnone size-medium wp-image-1002" /><figcaption>Des stats toutes fraîches :) </figcaption>Comme on peut le voir, sur le nombre de serveurs de Contrôle et de Commandes que la plateforme a pu recenser en France, plus de 50% des 5 chevaux de Troie les plus répandus dans l&rsquo;hexagone sont des serveurs DarkComet.</p>
+<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/test-1-800x600.jpg" alt="" width="800" height="600" class="alignnone size-medium wp-image-1002" /><figcaption>Des stats toutes fraîches 🤠 </figcaption>Comme on peut le voir, sur le nombre de serveurs de Contrôle et de Commandes que la plateforme a pu recenser en France, plus de 50% des 5 chevaux de Troie les plus répandus dans l&rsquo;hexagone sont des serveurs DarkComet.</p>
 <p>Si le cadre de l&rsquo;article précédent existait (mise en place de véritables fondements au hacking éthique) et que l&rsquo;on souhaitait frapper un grand coup, il faudrait probablement s&rsquo;attaquer aux serveurs DarkComet car ceux-ci représentent à eux seuls 50% du parc cybermalveillant français.</p>
 <h3> Ce que l&rsquo;on sait déjà </h3>
 <p>Darkcomet a déjà par le passé été victime d&rsquo;une vulnérabilité. En effet, depuis 2015, on sait qu&rsquo;il est possible de provoquer une « Arbitrary File Download » ou téléchargement de fichier arbitraire en français sur n&rsquo;importe quel serveur DarkComet. Cependant, bien que cette vulnérabilité soit intéressante elle n&rsquo;est pas critique pour le serveur.Un point de départ logique serait donc d&rsquo;examiner la fonctionnalité d&rsquo;envois de fichiers de DarkComet (de serveur à ordinateur infecté).</p>
@@ -503,7 +503,7 @@ I: "flux binaire brut"
 <p>DarkComet est un logiciel très bien développé, à tel point qu&rsquo;il s&rsquo;agisse du trojan le plus populaire en France, et d&rsquo;ailleurs un des plus populaire dans le monde. Il est à peu près certains que si le développement du logiciel était toujours d&rsquo;actualité, les failles citées dans cet article ne seraient plus exploitables depuis un long moment. </p>
 <p>Seulement voilà, comme dit plus haut en guise d&rsquo;avertissement déguisé, on pourrait, seulement à l&rsquo;aide de ces deux vulnérabilités, nettoyer 50% du parc cybermalveillant français, d&rsquo;un coup, sans forcer, si bien sûr le cadre de l&rsquo;article précédent existait (mise en place de véritables fondements au hacking éthique, etc..) </p>
 <p>J&rsquo;espère que cette article vous a plu, n&rsquo;hésitez pas à laisser un commentaire, une remarque, ou même un message (je les lis tous et je répond généralement rapidement). </p>
-<p>En ce qui me concerne, j&rsquo;ai été ravis d&rsquo;écrire cet article, je n&rsquo;ai cependant pas encore choisi ma prochaine victime alors n&rsquo;hésitez pas à m&rsquo;envoyer des idées :)</p>
+<p>En ce qui me concerne, j&rsquo;ai été ravis d&rsquo;écrire cet article, je n&rsquo;ai cependant pas encore choisi ma prochaine victime alors n&rsquo;hésitez pas à m&rsquo;envoyer des idées 🤠</p>
 <h3>Sources</h3>
 <p>https://pseudolaboratories.github.io/DarkComet-upload-vulnerability/<br />
 https://www.shodan.io/<br />
@@ -535,7 +535,7 @@ https://fr.wikipedia.org/wiki/DarkComet</p>
     <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figcaption style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figcaption></figure>
 <p></p>
 <p>C&rsquo;est à ce moment-là que je vois venir les hordes de semi-questions du type: « Je ne vois pas le rapport avec le titre de l&rsquo;article ? »</p>
-<p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question :) ) :</p>
+<p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question 🤠 ) :</p>
 <p><strong><em>Que se passerait-il si au lieu de recenser et de traiter les ordinateurs infectés par des <del datetime="2019-05-05T18:00:04+00:00">vaisseaux aliens</del> logiciels malveillants, on recensait et on traitait <del datetime="2019-05-05T18:00:04+00:00">les vaisseaux mères</del> les serveurs de Contrôle et de Commande (C&amp;C) ?</em></strong></p>
 <p>Cette idée ne vient pas de moi, en réalité, elle existe depuis plusieurs années et porte le doux nom de « Malware Hunting ».</p>
 <p>Pour expliquer le principe, il n&rsquo;y a pas plus simple:</p>
@@ -554,7 +554,7 @@ https://fr.wikipedia.org/wiki/DarkComet</p>
 Je pense que ça pourrait avoir de grosses répercussions sociétales. En effet, ça pourrait changer l&rsquo;image de voleur 2.0 inhérente au hacker et on pourrait même voir apparaître un phénomène de mode non plus de vidéos ou d&rsquo;articles sur comment attaquer de pauvres ordinateurs mais plutôt sur comment identifier un botnet et le remonter aux autorités.</p>
 <p>Ces mêmes autorités pourraient avoir la mission de s&rsquo;assurer qu&rsquo;il ne s&rsquo;agisse pas d&rsquo;un pauvre site infecté qui fait office de relais aux vrai C&amp;C et ainsi donner le feu vert de l&rsquo;attaquer via un système de listes noires publiques d&rsquo;adresses IP comme il en existe déjà sur de nombreux sites spécialisés. Sans compter bien sûr tout le bénéfice que cela pourrait avoir en matière d&#8217;emplois.</p>
 <p>Même si je sais que je pars peut-être un peu loin, je suis sûr que c&rsquo;est faisable et que ça peut être une très bonne solution à un problème d&rsquo;insécurité informatique majeure que l&rsquo;on a aujourd&rsquo;hui en France et dans de nombreux pays.</p>
-<p>En attendant le deuxième épisode qui devrait être un peu plus amusant et un peu moins théorique, j&rsquo;espère que le début de cette mini-série vous a captivé pour la suite. Je voulais aussi tous vous remercier d&rsquo;être toujours plus nombreux à visiter le site et à m&rsquo;envoyer tout pleins de messages super encourageants :) .</p>
+<p>En attendant le deuxième épisode qui devrait être un peu plus amusant et un peu moins théorique, j&rsquo;espère que le début de cette mini-série vous a captivé pour la suite. Je voulais aussi tous vous remercier d&rsquo;être toujours plus nombreux à visiter le site et à m&rsquo;envoyer tout pleins de messages super encourageants 🤠 .</p>
 <p>À très bientôt les margoulins !</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/fun/malware-hunting-1-introduction/feed/</wfw:commentRss>

@@ -43,7 +43,7 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? Si vous avez répondu à haute voix (ou&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/drama-alert/enquete-campagne-russe-de-phishing-via-sms-sur-leboncoin/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? </p>
-<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille :)</p>
+<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille 🤠</p>
 <p>Internet est vaste et rempli de tous pleins de mystères. Et c&rsquo;est justement ce côté mystérieux qui me passionne. Vous comprenez donc que lorsque l&rsquo;on me tend un billet express pour découvrir les coulisses d&rsquo;une attaque (surtout comme celle-ci) je ne réfléchis pas deux fois !</p>
 <h3>1°) Le Contexte</h3>
 <p>Récement un de mes amis qui avait mis en vente un objet sur le leboncoin avait reçu un SMS lui notifiant qu&rsquo;il avait bien reçu le prépaiement de l&rsquo;objet en question.</p>
@@ -59,13 +59,13 @@
 <p> <img src="https://img1.koplayer.com/ScreenShot/com.antivirus/corwdYPO6EJ0GSM0-KSfKDDvF6aleCuEP93xqz2MryFdh7A3dKbupAcbMfoTZnKQ3jxc_50.png" /> </p>
 <p>Eh oui! Bien que troublante d&rsquo;ingéniosité sur de nombreux points, cette campagne tombe à l&rsquo;eau car nombreux sont à avoir reçu la notif mais peu sont allé juqu&rsquo;à tout faire pour avoir le petit fichier .apk installé sur leur téléphone.</p>
 <h3>2°) La charge utile (le fichier .apk)</h3>
-<p>Le fichier est très léger (pour une application :) ), pas plus de 300 Ko.<br />
+<p>Le fichier est très léger (pour une application 🤠 ), pas plus de 300 Ko.<br />
 Dès son execution, la fausse appli va se connecter au faux site afin que la victime puisse entrer ses coordonnées bancaires (bye bye les sous-sous).<br />
 Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Commande (C2C) va s&rsquo;opérer et via un fichier « gate.php », le serveur donne au zombie une sorte de mutex (en gros un identifiant, ex: 543759810537698240). </p>
 <p>Et c&rsquo;est là, que ça devient marrant: </p>
 <p>Les auteurs semblent avoir initialement prévu de s&rsquo;occuper d&rsquo;un botnet android via HTTP totalement soumis et dévoué à son C2C (serveur de Contrôle et de Commande). Le truc, c&rsquo;est que sur Android, il n&rsquo;y a pas vraiment de véritables moyens de persistance comme sur d&rsquo;autres systèmes :( . </p>
 <p>Par exemple, la permission d&rsquo;exécution en arrière-plan est choisie par l&rsquo;utilisateur lors de l&rsquo;installation et même si elle est activée, rien ne garantie que le démon (le service de l&rsquo;application) va bien se lancer de manière autonome après un redémarrage du téléphone. </p>
-<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri :) ) </p>
+<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri 🤠 ) </p>
 <p>Mais ne vous en faites pas, de ce côté les auteurs ont eu une idée de génie pour propager le malware (si si vraiment). Aller je vous donne un indice, voici les permissions que la fausse application demande au moment de l&rsquo;installation:</p>
 <pre>
     android.permission.CALL_PHONE          
@@ -102,7 +102,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <ul>
 <li>TOUS les virus ayant un lien avec cette organisation sont détectés par une vaste majorité d&rsquo;antivirus</li>
 <li>Les certificats sont auto-signés à l&rsquo;arrache (Ex: « CN:dddddddd fdfd » pour la backdoor leboncoin) alors qu&rsquo;ils ont des milliers de domaines</li>
-<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là :) </li>
+<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là 🤠 </li>
 <li>Certains codes sont des copiés collés de code retrouvé sur Github, Pastebin ou même StackOverflow (les crédits en moins)</li>
 <li>Il est très facile de remonter à leur serveur de Contrôle et de Commande </li>
 <li>Certains de leurs virus sont de véritables « call center » avec plus d&rsquo;une centaine d&rsquo;addresses IP différentes contactées dès les premières secondes de l&rsquo;exécution</li>
@@ -123,7 +123,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <p>En cherchant un peu on a même réussi à trouver une véritable vulnérabilité en or massif qui nous a permis de confirmer qu&rsquo;il s&rsquo;agissait d&rsquo;une solution totalement custom. Pour la petite histoire on a d&rsquo;ailleurs retrouvé des traces de précédentes installations (test ?) non fonctionnelles sur deux sites compromis d&rsquo;entreprises (1 américaine et 1 indienne).</p>
 <h3>3°) Verdict </h3>
 <p>Cette attaque a sur le papier largement de quoi effrayer de par sa sophistication (copie conforme des codes graphiques leboncoin, utilisation de la nouvelle fonctionnalité de prépaiement comme prétexte pour le phishing, relai SMS des victimes pour propager le malware &#8230;). Cependant, dans les faits, l&rsquo;attaque n&rsquo;ébranle pas forcément voire carrément pas du tout la communauté leboncoin.</p>
-<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas :) </p>
+<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas 🤠 </p>
 <p><u>TELEX:</u> en guise de contre-mesure simple mais efficace, pensez seulement à être plus attentif aux liens avant de cliquer directement.</p>
 <h3>Bonus: IOC&rsquo;s de la campagne </h3>
 <pre>
@@ -270,9 +270,9 @@ Au revoir!
 <p>Alors tout d&rsquo;abord, la première chose qui me choque là-dedans c&rsquo;est les fautes de français. Très sérieusement le fait qu&rsquo;il n&rsquo;y ait aucune faute de grammaire mais que syntaxiquement parlant tout soit à refaire indique très clairement qu&rsquo;il s&rsquo;agit d&rsquo;un mail copié collé directement de Google Traduction. On a donc affaire à une démonstration d&rsquo;attaque de masse.</p>
 <p>Ensuite, ce que je trouve plutôt « marrant » c&rsquo;est que l&rsquo;attaquant dit avoir réussi à pirater l&rsquo;appareil de la victime avec ici un RAT. Pour ceux qui ne savent pas ce que c&rsquo;est, je vous invite à jeter un petit coup d’œil à <a href="https://blog.tchernobyl.ml/systeme/les-r-a-t-ou-les-pires-arnaques-du-web/">mon article sur les RAT</a>. Le truc qui ne tient pas la route, c&rsquo;est qu&rsquo;aucun hacker ne serait assez stupide pour révéler à la victime comment il a fait pour en arriver là.</p>
 <p>C&rsquo;est typiquement ce qu&rsquo;en psychologie on appelle ça un argument d&rsquo;autorité: « je suis un hacker DONC je sais de quoi je parle »</p>
-<p>En effet, en disant à la victime, qui n&rsquo;y connaît d&rsquo;ailleurs pas grand-chose, pleins de mots très techniques sur comment il aurait pu faire pour la pirater donne du crédit au discours, donc au mail alors que je le répète AUCUN PIRATAGE N&rsquo;A EU LIEU (du moins aucun en rapport avec ce mail :) )</p>
+<p>En effet, en disant à la victime, qui n&rsquo;y connaît d&rsquo;ailleurs pas grand-chose, pleins de mots très techniques sur comment il aurait pu faire pour la pirater donne du crédit au discours, donc au mail alors que je le répète AUCUN PIRATAGE N&rsquo;A EU LIEU (du moins aucun en rapport avec ce mail 🤠 )</p>
 <h3>Que faire ?</h3>
-<p>Si votre mot de passe est divulgué dans le mail, changer le tout de suite ! À part ça, il ne faut A-B-S-O-L-U-M-E-N-T rien faire. En effet, il ne faut ni supprimer le mail (destruction de preuves :) ), ni chercher à répondre à l&rsquo;attaquant vous pourriez lui envoyer sans le vouloir de précieuses informations.</p>
+<p>Si votre mot de passe est divulgué dans le mail, changer le tout de suite ! À part ça, il ne faut A-B-S-O-L-U-M-E-N-T rien faire. En effet, il ne faut ni supprimer le mail (destruction de preuves 🤠 ), ni chercher à répondre à l&rsquo;attaquant vous pourriez lui envoyer sans le vouloir de précieuses informations.</p>
 <p><center><img class="alignnone size-full wp-image-1051" src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/everybody-is-being-hacked-while-im-just-sitting-here-doing-absolutely-nothing.jpg" alt="everybody-is-being-hacked-while-im-just-sitting-here-doing-absolutely-nothing" width="469" height="359" /></center></p>
 <h3>Qui sont les « hackers » ?</h3>
 <p>La suite logique serait maintenant de se demander qui est derrière tout ça. En vérité, il faut savoir que ce genre de campagne de mails malveillants que certains experts appellent d&rsquo;ailleurs « sextortion » est un phénomène relativement récent dans les internets français.</p>
@@ -280,7 +280,7 @@ Au revoir!
 <p>On peut donc penser que les auteurs ne sont pas les mêmes et que la dernière campagne est plus une réplique Eco+ de la première. De plus le fait que les pirates fassent autant de fautes de français indiquer clairement qu&rsquo;ils opèrent hors de l&rsquo;hexagone.</p>
 <h3>Conclusion</h3>
 <p>Cette dernière campagne de sextorsion indique très clairement que les pirates qui sont derrière tout ça ont très bien compris que l&rsquo;attaque pouvait être très lucrative.</p>
-<p>On peut donc imaginer voir de plus en plus de campagnes de chantages de ce genre par mails. C&rsquo;est pourquoi pour vaincre ce fléau il faut à tout prix éviter de financer ces véritables escrocs du net et sensibiliser son entourage. Profitez-en pour partager cet article à vos amis ou vos collègues :)</p>
+<p>On peut donc imaginer voir de plus en plus de campagnes de chantages de ce genre par mails. C&rsquo;est pourquoi pour vaincre ce fléau il faut à tout prix éviter de financer ces véritables escrocs du net et sensibiliser son entourage. Profitez-en pour partager cet article à vos amis ou vos collègues 🤠</p>
 <p>À très bientôt !</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/drama-alert/le-hacking-en-2019-les-mails-de-chantages-au-bitcoin/feed/</wfw:commentRss>
@@ -471,7 +471,7 @@ hxxps://webmail.qchem.com/OWA/auth/RedirectCache.aspx
 hxxps://meet.saudiairlines.com/ClientResourceHandler.aspx
 </pre>
 <p>Même si 18 Mo ont l&rsquo;air de rien comme ça, il s&rsquo;agit d&rsquo;une fuite très critique étant donné la nature très sensible (voire secret défense) des informations dont elle fait l&rsquo;objet.</p>
-<p>Grâce à ces fuites on comprend mieux comment ce groupe opère. On sait par exemple à quoi ressemble leur serveur de contrôle et de commande et comment ils commandent les hôtes infectés: une interface Web dédiée nommée ScareCrow est utilisée (Épouvantail pour les plus Anglophobes :) )</p>
+<p>Grâce à ces fuites on comprend mieux comment ce groupe opère. On sait par exemple à quoi ressemble leur serveur de contrôle et de commande et comment ils commandent les hôtes infectés: une interface Web dédiée nommée ScareCrow est utilisée (Épouvantail pour les plus Anglophobes 🤠 )</p>
 <p>En bref, affaire à suivre donc</p>
 <h4>sources</h4>
 <p>https://malware-research.org/apt34-hacking-tools-leak/<br />
