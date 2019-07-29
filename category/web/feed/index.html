@@ -43,7 +43,7 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&#8217;est très simple, je ne&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&rsquo;est très simple, je ne peux tout simplement pas utiliser un navigateur si je n&rsquo;ai pas de bloqueur de pub d&rsquo;installé !</p>
-<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation 🤠</figcaption><p></p>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
+<center><p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation 🤠</figcaption></center><p></p>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
 <p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones 🤠 ).</p>
 <p>Si vous pensez comme moi, alors vous êtes à la bonne adresse, car aujourd&rsquo;hui, je vous propose ce petit tuto <a href="https://blog.tchernobyl.ml/category/diy/">DIY</a> afin d&rsquo;en finir définitivement avec les pubs chez vous ou à votre lieu de travail.</p>
 <h3>Ingrédients : </h3>
@@ -61,7 +61,7 @@ ssh pi@[ADRESSE_LOCALE_RASPBERRY]
 </pre>
 <p>puis en mot en de passe : « raspberry »</p>
 <p>ou via Putty pour les plus Windowsiens</p>
-<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption><p></p><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de 🤠 </figcaption><p></p>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
+<center><p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption></center><p></p><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de 🤠 </figcaption></center><p></p>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
 <pre>
 pi@raspberry:~ $ passwd
 Mot de passe actuel : "raspberry"
@@ -74,16 +74,16 @@ Confirmation du mot de passe : [le même mot de passe que précédement entré �
 pi@raspberry:~ $ curl -sSL https://install.pi-hole.net | bash
 </pre>
 <p>le script devrait se lancer :</p>
-<p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption><p></p>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
+<center><p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption></center><p></p>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
 <img src="https://i.imgur.com/wnfcdov.png" /></p>
 <p>Une fois l&rsquo;installation terminée, l&rsquo;adresse d&rsquo;une page d&rsquo;administration ainsi que votre mot de passe pour y accéder vous sont donnés, retenez le mot de passe ! Si vous préférez un autre mot de passe, vous pouvez toujours le changez via la commande : </p>
 <pre>
 pi@raspberry:~ $ sudo pihole -a -p
 </pre>
 <p>Une fois que tout est bien configuré on vérifie juste que la page d&rsquo;administration fonctionne, si tout se passe bien vous devriez avoir affaire à une page semblable à celle-ci : </p>
-<p><img src="https://i.imgur.com/s6aW8Yq.png" /></p>
+<center><p><img src="https://i.imgur.com/s6aW8Yq.png" /></p>
 <p>À partir de là, vous pourrez configcaptionr Pi-Hole à votre guise afin d&rsquo;y mettre des réglages plus fin si vous le souhaitez. L&rsquo;avantage avec cet outil, c&rsquo;est qu&rsquo;on peut maintenant tout superviser et potentiellement tout bloquer, faites donc attention à ne pas faire vivre à votre entourage une mini NSA domestique ou un Big Brother en puissance ! ☹️</p>
-<p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figcaption>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figcaption><p></p>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
+<center><p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figcaption>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figcaption></center><p></p>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
 <p>&#8211; La manière douce, en changeant l&rsquo;adresse IP du serveur DNS de votre Box internet par celle de votre Raspberry et ainsi en mettant la configuration DNS de tous les autres appareils par défaut (comme ça, les appareils récupèrent automatique l&rsquo;adresse DNS du Raspberry).</p>
 <p>&#8211; La manière fine (ou « cas par cas »), en changeant l&rsquo;adresse IP du serveur DNS de chaque machine que vous souhaitez « libérer » des pubs.</p>
 <p>&#8211; La manière radicale, désactiver DHCP de votre Box internet et laisser le Raspberry tout faire tout seul via le serveur DHCP intégré. </p>
@@ -92,7 +92,7 @@ pi@raspberry:~ $ sudo pihole -a -p
 <p>Pour avoir testé Pi-Hole, je dois reconnaître qu&rsquo;il s&rsquo;agit là d&rsquo;une solution comme je les aime, à savoir hyper simple à installer, hyper simple à configcaptionr, hyper simple à déployer et qui sont très souvent les plus efficaces qui puissent exister. Le tout servi, s&rsquo;il vous plait, avec une documentation bien fournie qui permette bien entendu d&rsquo;aller plus loin. </p>
 <p>Voili, voilou, on ne change pas les bonnes habitudes, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis et évidemment à faire votre propre idée sur le sujet.</p>
 <p>D&rsquo;ici là, portez-vous bien, buvez de l&rsquo;eau car l&rsquo;eau c&rsquo;est la vie et à bientôt tout le monde !</p>
-<p><img src="https://i.imgur.com/bYJGrl5.jpg" /></p>
+<center><p><img src="https://i.imgur.com/bYJGrl5.jpg" /></p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
@@ -115,17 +115,17 @@ pi@raspberry:~ $ sudo pihole -a -p
 <blockquote><p>
 La neutralité du Net ou la neutralité du réseau est un principe devant garantir l&rsquo;égalité de traitement de tous les flux de données sur Internet. Ce principe exclut par exemple toute discrimination positive ou négative à l&rsquo;égard de la source, de la destination ou du contenu de l&rsquo;information transmise sur le réseau.</p></blockquote>
 <p>Je me rappelle d&rsquo;ailleurs qu&rsquo;il y a quelques années ça avait vraiment fait le buzz lorsque les États-Unis avaient décidé d&rsquo;y mettre un terme, tout pleins de célébrités de tous les horizons avaient montré leur mécontentement face à cette mesure qui n&rsquo;avantageais QUE les gros opérateurs bien juteux comme AT&amp;T et j&rsquo;en passe&#8230;</p>
-<p><img src="https://media.giphy.com/media/UOOrmYpZPwRm8/giphy.gif" alt="US"></p>
+<center><p><img src="https://media.giphy.com/media/UOOrmYpZPwRm8/giphy.gif" alt="US"></p>
 <p>En Europe, fort heureusement, les institutions tiennent *encore* le coup face aux grands groupes (mais pour combien de temps encore ? :( ).</p>
-<p><img src="https://media.giphy.com/media/l3mZ99WVXIFIGsZY4/giphy.gif" alt="UE"></p>
+<center><p><img src="https://media.giphy.com/media/l3mZ99WVXIFIGsZY4/giphy.gif" alt="UE"></p>
 <p>Tout ça pour dire que si vous avez un gros doute sur votre Fournisseur d&rsquo;Accès à Internet (FAI), vous pouvez toujours faire ce <a href="https://ip.lafibre.info/neutralite.php" rel="noopener noreferrer" target="_blank">test</a> (<a href="https://ip.lafibre.info/neutralite.php" rel="noopener noreferrer" target="_blank">https://ip.lafibre.info/neutralite.php</a>) ultra simple sur lequel je suis tombé avec un ami totalement par hasard il y a quelques jours alors que nous faisions des tests pour une future surprise que je vous réserve dans un prochain article 😉.</p>
 <p>Le test est on ne peut plus simple :</p>
 <p>Deux images doivent être téléchargées, l&rsquo;une via HTTP, l&rsquo;autre via HTTPS, si l&rsquo;une des deux images est plus légère que l&rsquo;autre alors vous avez du souci à vous faire !!!</p>
 <p>En effet, si vous constatez une différence de poids, alors il faut comparer le poids de référence (ex: pour la première image, 43 225 octets) et voir laquelle est fautive:</p>
 <p>S&rsquo;il s&rsquo;agit de l&rsquo;image en HTTP, cela peut vouloir dire que votre FAI prends un malin plaisir à manipuler les images afin de réduire leur taille (et bafoue au passage le principe de neutralité du net 😠).</p>
-<p><img src="https://media.giphy.com/media/1236TCtX5dsGEo/giphy.gif" alt="Bravo!"></p>
+<center><p><img src="https://media.giphy.com/media/1236TCtX5dsGEo/giphy.gif" alt="Bravo!"></p>
 <p>Si en revanche il s&rsquo;agit de l&rsquo;image en HTTPS, alors courez vite débrancher / rebrancher votre Box internet et refaites le test car c&rsquo;est sûrement le signe qu&rsquo;on écoute votre connexion internet 😰 !!!</p>
-<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figcaption>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figcaption><p></p>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
+<center><p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figcaption>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figcaption></center><p></p>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
 <pre>
 [✓] IMAGE_HTTP:     43 225
 |✓] IMAGE_HTTPS:    43 225
@@ -133,10 +133,10 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 [✓] Le FAI est neutre !
 
 </pre>
-<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figcaption>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figcaption><p></p>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
+<center><p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figcaption>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figcaption></center><p></p>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
 <p>Voili, voilou, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis pour qu&rsquo;on connaisse un peu l&rsquo;état des lieux de la neutralité du net en Europe (ou ailleurs !) en 2019. Ça peut être aussi une très belle occasion pour prendre conscience de la sûreté de sa connexion (surtout si on se rend compte qu&rsquo;on est sur écoute !).</p>
 <p>d&rsquo;ici là portez vous bien, buvez de l&rsquo;eau et à bientôt tout le monde !</p>
-<p><img src="https://i.imgur.com/ehlPHlP.jpg" alt="neutralité"></p>
+<center><p><img src="https://i.imgur.com/ehlPHlP.jpg" alt="neutralité"></p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/fun/neutralite-du-net-comment-savoir-si-votre-fai-est-neutre/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
@@ -160,7 +160,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>Même s&rsquo;ils ont essayé de lutter, ils ne faisaient clairement pas le poids contre une civilisation alien nettement plus avancée technologiquement. C&rsquo;est alors qu&rsquo;à un moment, étant fatigués d&rsquo;essayer de détruire un à un les vilains vaisseaux aliens, un informaticien dans le film a carrément l&rsquo;idée de détruire le vaisseau mère à l&rsquo;aide d&rsquo;un virus informatique ainsi que d&rsquo;une ogive nucléaire (le virus visant à créer une attaque informatique de grande ampleur sur les vaisseaux sur Terre et l&rsquo;ogive, à mettre H.S le vaisseau mère).<br />
 </p>
 <figure>
-    <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figcaption style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figcaption><p></p></figure>
+    <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figcaption style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figcaption></center><p></p></figure>
 <p></p>
 <p>C&rsquo;est à ce moment-là que je vois venir les hordes de semi-questions du type: « Je ne vois pas le rapport avec le titre de l&rsquo;article ? »</p>
 <p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question 🤠 ) :</p>
