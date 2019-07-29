@@ -43,8 +43,8 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&#8217;est très simple, je ne&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&rsquo;est très simple, je ne peux tout simplement pas utiliser un navigateur si je n&rsquo;ai pas de bloqueur de pub d&rsquo;installé !</p>
-<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figure>Un meme qui explique bien ma situation :)</figure>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
-<p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones :) ).</p>
+<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figure>Un meme qui explique bien ma situation 🤠</figure>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
+<p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones 🤠 ).</p>
 <p>Si vous pensez comme moi, alors vous êtes à la bonne adresse, car aujourd&rsquo;hui, je vous propose ce petit tuto <a href="https://blog.tchernobyl.ml/category/diy/">DIY</a> afin d&rsquo;en finir définitivement avec les pubs chez vous ou à votre lieu de travail.</p>
 <h3>Ingrédients : </h3>
 <p>&#8211; un Raspberry Pi 🍓 (désolé il n&rsquo;y avait plus d&#8217;emojis framboise)<br />
@@ -61,12 +61,12 @@ ssh pi@[ADRESSE_LOCALE_RASPBERRY]
 </pre>
 <p>puis en mot en de passe : « raspberry »</p>
 <p>ou via Putty pour les plus Windowsiens</p>
-<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figure>on met l&rsquo;IP du Raspberry dans le champ IP</figure><img src="https://i.imgur.com/e4pV7nU.png" /><figure>puis on met le mot de :) </figure>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
+<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figure>on met l&rsquo;IP du Raspberry dans le champ IP</figure><img src="https://i.imgur.com/e4pV7nU.png" /><figure>puis on met le mot de passe 🤠 </figure>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
 <pre>
 pi@raspberry:~ $ passwd
 Mot de passe actuel : "raspberry"
 Nouveau mot de passe : [N'IMPORTE_QUOI_MAIS_PAS_"raspberry" !!]
-Confirmation du mot de passe : [le même mot de passe que précédement entré :) ]
+Confirmation du mot de passe : [le même mot de passe que précédement entré 🤠 ]
 </pre>
 <p>À présent il est temps de parler de la solution que j&rsquo;ai choisi : « Pi-Hole ». Il s&rsquo;agit d&rsquo;une solution Open-Source, ultra simpliste comme toujours et qui permet de régler notre souci de publicité d&rsquo;une manière aussi intuitive qu&rsquo;efficace. En effet, une fois que l&rsquo;on aura mis en place la solution, le Raspberry jouera le rôle de « filtre ». </p>
 <p>L&rsquo;installation de Pi-Hole est ultra simpliste : </p>
@@ -74,7 +74,7 @@ Confirmation du mot de passe : [le même mot de passe que précédement entré :
 pi@raspberry:~ $ curl -sSL https://install.pi-hole.net | bash
 </pre>
 <p>le script devrait se lancer :</p>
-<p><img src="https://i.imgur.com/rHChPdC.png" /><figure>cette framboise&#8230; 😍</figure>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS :)<br />
+<p><img src="https://i.imgur.com/rHChPdC.png" /><figure>cette framboise&#8230; 😍</figure>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
 <img src="https://i.imgur.com/wnfcdov.png" /></p>
 <p>Une fois l&rsquo;installation terminée, l&rsquo;adresse d&rsquo;une page d&rsquo;administration ainsi que votre mot de passe pour y accéder vous sont donnés, retenez le mot de passe ! Si vous préférez un autre mot de passe, vous pouvez toujours le changez via la commande : </p>
 <pre>
@@ -125,7 +125,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>S&rsquo;il s&rsquo;agit de l&rsquo;image en HTTP, cela peut vouloir dire que votre FAI prends un malin plaisir à manipuler les images afin de réduire leur taille (et bafoue au passage le principe de neutralité du net 😠).</p>
 <p><img src="https://media.giphy.com/media/1236TCtX5dsGEo/giphy.gif" alt="Bravo!"></p>
 <p>Si en revanche il s&rsquo;agit de l&rsquo;image en HTTPS, alors courez vite débrancher / rebrancher votre Box internet et refaites le test car c&rsquo;est sûrement le signe qu&rsquo;on écoute votre connexion internet 😰 !!!</p>
-<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figure>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » :)</figure>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
+<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figure>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figure>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
 <pre>
 [✓] IMAGE_HTTP:     43 225
 |✓] IMAGE_HTTPS:    43 225
@@ -133,7 +133,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 [✓] Le FAI est neutre !
 
 </pre>
-<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figure>Oui, j&rsquo;ai dansé comme ça dans ma chambre :) </figure>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
+<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figure>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figure>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
 <p>Voili, voilou, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis pour qu&rsquo;on connaisse un peu l&rsquo;état des lieux de la neutralité du net en Europe (ou ailleurs !) en 2019. Ça peut être aussi une très belle occasion pour prendre conscience de la sûreté de sa connexion (surtout si on se rend compte qu&rsquo;on est sur écoute !).</p>
 <p>d&rsquo;ici là portez vous bien, buvez de l&rsquo;eau et à bientôt tout le monde !</p>
 <p><img src="https://i.imgur.com/ehlPHlP.jpg" alt="neutralité"></p>
@@ -163,7 +163,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
     <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figure style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figure></figure>
 <p></p>
 <p>C&rsquo;est à ce moment-là que je vois venir les hordes de semi-questions du type: « Je ne vois pas le rapport avec le titre de l&rsquo;article ? »</p>
-<p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question :) ) :</p>
+<p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question 🤠 ) :</p>
 <p><strong><em>Que se passerait-il si au lieu de recenser et de traiter les ordinateurs infectés par des <del datetime="2019-05-05T18:00:04+00:00">vaisseaux aliens</del> logiciels malveillants, on recensait et on traitait <del datetime="2019-05-05T18:00:04+00:00">les vaisseaux mères</del> les serveurs de Contrôle et de Commande (C&amp;C) ?</em></strong></p>
 <p>Cette idée ne vient pas de moi, en réalité, elle existe depuis plusieurs années et porte le doux nom de « Malware Hunting ».</p>
 <p>Pour expliquer le principe, il n&rsquo;y a pas plus simple:</p>
@@ -182,7 +182,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 Je pense que ça pourrait avoir de grosses répercussions sociétales. En effet, ça pourrait changer l&rsquo;image de voleur 2.0 inhérente au hacker et on pourrait même voir apparaître un phénomène de mode non plus de vidéos ou d&rsquo;articles sur comment attaquer de pauvres ordinateurs mais plutôt sur comment identifier un botnet et le remonter aux autorités.</p>
 <p>Ces mêmes autorités pourraient avoir la mission de s&rsquo;assurer qu&rsquo;il ne s&rsquo;agisse pas d&rsquo;un pauvre site infecté qui fait office de relais aux vrai C&amp;C et ainsi donner le feu vert de l&rsquo;attaquer via un système de listes noires publiques d&rsquo;adresses IP comme il en existe déjà sur de nombreux sites spécialisés. Sans compter bien sûr tout le bénéfice que cela pourrait avoir en matière d&#8217;emplois.</p>
 <p>Même si je sais que je pars peut-être un peu loin, je suis sûr que c&rsquo;est faisable et que ça peut être une très bonne solution à un problème d&rsquo;insécurité informatique majeure que l&rsquo;on a aujourd&rsquo;hui en France et dans de nombreux pays.</p>
-<p>En attendant le deuxième épisode qui devrait être un peu plus amusant et un peu moins théorique, j&rsquo;espère que le début de cette mini-série vous a captivé pour la suite. Je voulais aussi tous vous remercier d&rsquo;être toujours plus nombreux à visiter le site et à m&rsquo;envoyer tout pleins de messages super encourageants :) .</p>
+<p>En attendant le deuxième épisode qui devrait être un peu plus amusant et un peu moins théorique, j&rsquo;espère que le début de cette mini-série vous a captivé pour la suite. Je voulais aussi tous vous remercier d&rsquo;être toujours plus nombreux à visiter le site et à m&rsquo;envoyer tout pleins de messages super encourageants 🤠 .</p>
 <p>À très bientôt les margoulins !</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/fun/malware-hunting-1-introduction/feed/</wfw:commentRss>
@@ -210,7 +210,7 @@ Je pense que ça pourrait avoir de grosses répercussions sociétales. En effet,
 </pre>
 <p>Pour faire simple, une commande powershell qui vise à télécharger un fichier exécutable et à l&rsquo;exécuter est injectée dans le fichier « index.php », ce qui a pour but de causer l’exécution de cette commande par le système.</p>
 <p>Après vérification, il s&rsquo;agirait d&rsquo;une démonstration d&rsquo;attaque contre « ThinkPHP », un framework de développement d&rsquo;applications Web basé sur PHP et distribué sous la licence open source Apache2. Il serait très populaire en Chine, où plus de 40 000 serveurs exécutent ThinkPHP (<a href="https://securitynews.sonicwall.com/xmlpost/thinkphp-remote-code-execution-rce-bug-is-actively-being-exploited/" rel="noopener noreferrer" target="_blank">source</a>)</p>
-<p>Très curieux, et passionné par ce genre de mystères d&rsquo;internet, je télécharge le fichier exécutable et je me mets donc à table (façon de parler) :) .</p>
+<p>Très curieux, et passionné par ce genre de mystères d&rsquo;internet, je télécharge le fichier exécutable et je me mets donc à table (façon de parler) 🤠 .</p>
 <h3>2°) Le Dropper </h3>
 <p>Premièrement, le fichier n&rsquo;est pas lourd du tout (seulement 90 ko) ce qui nous mène à supposer qu&rsquo;il ne s&rsquo;agisse là que d&rsquo;un dropper qui ne téléchargera la charge utile qu&rsquo;après execution. Ce genre de procédé est largement répandu pour faciliter et contrôler l&rsquo;execution du « vrai » virus. </p>
 <p>Ce que je peux dire à ce stade, c&rsquo;est que la ou les personnes qui ont écrit cette pièce de code ne sont pas du tout débutantes. En effet, même si je sais que le programme a été écrit en C++ en regardant quelles bibliothèques sont chargées, je ne peux rien dire d&rsquo;autre sur le contexte d&rsquo;écriture. Il n&rsquo;y a par exemple aucun artéfact de déboguage, aucun commentaire, rien du tout à part le programme en question. Ce qui est assez rare pour le souligner.</p>
@@ -241,7 +241,7 @@ http://2019.ip138.com/ic.asp 117.25.157.119 ----&gt; Contrôle et Commande (SERV
 <p>Le point intriguant dans tout ceci c&rsquo;est que le plus gros bénéfice de l&rsquo;opération se trouve en Chine et comme par hasard un serveur vital de l&rsquo;opération se trouve être lui aussi en Chine. </p>
 <p>Ce point est d&rsquo;autant plus intriguant lorsque l&rsquo;on sait que le domaine serait attribué à <a href="https://attack.mitre.org/groups/G0073/">APT 19</a>. Aussi connue sous le doux nom de « Codoso Team » ou encore « Sunshop Group ». Il s&rsquo;agirait d&rsquo;un groupe de hackers indépendants qui bénéficieraient d&rsquo;une certaine forme d&rsquo;appui de la part du gouvernement chinois (<a href="https://www.fireeye.fr/current-threats/apt-groups.html#apt19">source</a>) </p>
 <p>En bref, voilà où m&rsquo;a mené ma petite enquête pour en apprendre un peu plus sur ces pirates de l&rsquo;ombre qui font tant parler d&rsquo;eux, et sur qui, paradoxalement, on connait peu de choses. </p>
-<p>J&rsquo;espère que cet article vous a plu, n&rsquo;hésitez pas à m&rsquo;envoyer des messages via le formulaire de contact ou même en commentaire pour me donner votre point de vue, ou si vous avez connu la même situation / une situation similaire, je les lirais tous ! :)</p>
+<p>J&rsquo;espère que cet article vous a plu, n&rsquo;hésitez pas à m&rsquo;envoyer des messages via le formulaire de contact ou même en commentaire pour me donner votre point de vue, ou si vous avez connu la même situation / une situation similaire, je les lirais tous ! 🤠</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/fun/dissection-dune-attaque-de-masse-chinoise/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
