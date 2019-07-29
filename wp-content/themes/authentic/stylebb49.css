@@ -3017,7 +3017,7 @@ select {
 	position: relative;
 	margin: 3rem auto;
 }
-.post-media figure {
+.post-media figcaption {
 	margin-top: 1rem;
 	font-size: 0.875rem;
 	text-align: right;
@@ -3324,7 +3324,7 @@ article > .post-media:first-child {
 	margin-left: auto;
 }
 
-.content figure {
+.content figcaption {
 	margin-top: 1rem;
 	color: #dee2e6;
 	font-size: 0.875rem;
@@ -5563,7 +5563,7 @@ img {
 .gallery-type-slider figure {
 	margin: 0;
 }
-.gallery-type-slider figure {
+.gallery-type-slider figcaption {
 	margin-top: 15px;
 	font-size: 0.9rem;
 }
@@ -5741,7 +5741,7 @@ div[class*=" gallery-columns-"] .gallery-item {
 div[class*=" gallery-columns-"] .gallery-icon {
 	position: relative;
 }
-div[class*=" gallery-columns-"] .gallery-icon + figure {
+div[class*=" gallery-columns-"] .gallery-icon + figcaption {
 	margin-top: 15px;
 	font-size: 0.9rem;
 }

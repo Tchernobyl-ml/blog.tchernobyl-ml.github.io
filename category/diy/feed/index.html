@@ -43,7 +43,7 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&#8217;est très simple, je ne&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&rsquo;est très simple, je ne peux tout simplement pas utiliser un navigateur si je n&rsquo;ai pas de bloqueur de pub d&rsquo;installé !</p>
-<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figure>Un meme qui explique bien ma situation :)</figure>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
+<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation :)</figcaption>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
 <p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones :) ).</p>
 <p>Si vous pensez comme moi, alors vous êtes à la bonne adresse, car aujourd&rsquo;hui, je vous propose ce petit tuto <a href="https://blog.tchernobyl.ml/category/diy/">DIY</a> afin d&rsquo;en finir définitivement avec les pubs chez vous ou à votre lieu de travail.</p>
 <h3>Ingrédients : </h3>
@@ -51,7 +51,7 @@
 &#8211; une carte SD, à la base je n&rsquo;en ai pas vraiment besoin vu l&rsquo;installation que j&rsquo;ai (<a href="https://blog.tchernobyl.ml/diy/tchernobyl-ml-un-raspberry-pi-et-ca-repart/" rel="noopener noreferrer" target="_blank">ici</a>)mais une carte SD de 4 Go devrait être largement suffisante.<br />
 &#8211; une alimentation usb (si vous n&rsquo;avez pas l&rsquo;alimentation officielle sous la main, votre chargeur *<strong>USB</strong>* de téléphone fait largement l&rsquo;affaire)<br />
 &#8211; une distribution Linux, la plus plébiscité sur Raspberry Pi étant Raspbian, on prendra Rapsbian, mais n&rsquo;importe quel distrib fait l&rsquo;affaire !<br />
-&#8211; un autre ordinateur (pour configurer notre framboise)</p>
+&#8211; un autre ordinateur (pour configcaptionr notre framboise)</p>
 <h3>Préparer le terrain : </h3>
 <p>Normalement, quand vous sortez du carton votre Raspberry Pi, il n&rsquo;y a rien d&rsquo;installé, courrez donc brancher votre carte SD dans le lecteur de carte SD de votre autre ordinateur afin d&rsquo;installer Raspbian sur la carte comme précisé sur ce petit <a href="https://blog.tchernobyl.ml/diy/etcher-ou-rendre-une-usb-bootable-sur-linux-mac-os-ou-meme-windows/">tuto</a> </p>
 <p>Après cela, on s&#8217;empresse d&rsquo;activer le service SSH de notre Raspberry Pi en allant dans la partition boot (et non le dossier /boot à la racine). Une fois qu&rsquo;on est dans la bonne partition, on crée simplement un fichier vide nommé « ssh ».</p>
@@ -61,7 +61,7 @@ ssh pi@[ADRESSE_LOCALE_RASPBERRY]
 </pre>
 <p>puis en mot en de passe : « raspberry »</p>
 <p>ou via Putty pour les plus Windowsiens</p>
-<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figure>on met l&rsquo;IP du Raspberry dans le champ IP</figure><img src="https://i.imgur.com/e4pV7nU.png" /><figure>puis on met le mot de :) </figure>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
+<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de :) </figcaption>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
 <pre>
 pi@raspberry:~ $ passwd
 Mot de passe actuel : "raspberry"
@@ -74,7 +74,7 @@ Confirmation du mot de passe : [le même mot de passe que précédement entré :
 pi@raspberry:~ $ curl -sSL https://install.pi-hole.net | bash
 </pre>
 <p>le script devrait se lancer :</p>
-<p><img src="https://i.imgur.com/rHChPdC.png" /><figure>cette framboise&#8230; 😍</figure>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS :)<br />
+<p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS :)<br />
 <img src="https://i.imgur.com/wnfcdov.png" /></p>
 <p>Une fois l&rsquo;installation terminée, l&rsquo;adresse d&rsquo;une page d&rsquo;administration ainsi que votre mot de passe pour y accéder vous sont donnés, retenez le mot de passe ! Si vous préférez un autre mot de passe, vous pouvez toujours le changez via la commande : </p>
 <pre>
@@ -82,14 +82,14 @@ pi@raspberry:~ $ sudo pihole -a -p
 </pre>
 <p>Une fois que tout est bien configuré on vérifie juste que la page d&rsquo;administration fonctionne, si tout se passe bien vous devriez avoir affaire à une page semblable à celle-ci : </p>
 <p><img src="https://i.imgur.com/s6aW8Yq.png" /></p>
-<p>À partir de là, vous pourrez configurer Pi-Hole à votre guise afin d&rsquo;y mettre des réglages plus fin si vous le souhaitez. L&rsquo;avantage avec cet outil, c&rsquo;est qu&rsquo;on peut maintenant tout superviser et potentiellement tout bloquer, faites donc attention à ne pas faire vivre à votre entourage une mini NSA domestique ou un Big Brother en puissance ! ☹️</p>
-<p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figure>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figure>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
+<p>À partir de là, vous pourrez configcaptionr Pi-Hole à votre guise afin d&rsquo;y mettre des réglages plus fin si vous le souhaitez. L&rsquo;avantage avec cet outil, c&rsquo;est qu&rsquo;on peut maintenant tout superviser et potentiellement tout bloquer, faites donc attention à ne pas faire vivre à votre entourage une mini NSA domestique ou un Big Brother en puissance ! ☹️</p>
+<p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figcaption>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figcaption>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
 <p>&#8211; La manière douce, en changeant l&rsquo;adresse IP du serveur DNS de votre Box internet par celle de votre Raspberry et ainsi en mettant la configuration DNS de tous les autres appareils par défaut (comme ça, les appareils récupèrent automatique l&rsquo;adresse DNS du Raspberry).</p>
 <p>&#8211; La manière fine (ou « cas par cas »), en changeant l&rsquo;adresse IP du serveur DNS de chaque machine que vous souhaitez « libérer » des pubs.</p>
 <p>&#8211; La manière radicale, désactiver DHCP de votre Box internet et laisser le Raspberry tout faire tout seul via le serveur DHCP intégré. </p>
 <p>Les trois méthodes fonctionnent bien entendu tout aussi bien, vous faîtes vraiment comme vous le sentez. Personnellement j&rsquo;ai une préférence pour la manière douce, car c&rsquo;est celle qui est selon moi la moins casse-tête. Par exemple, si vous achetez un nouvel appareil, aucune configuration n&rsquo;est requise pour cet appareil, car il récupère automatiquement l&rsquo;adresse du Raspberry via votre Box internet.</p>
 <h3>Verdict </h3>
-<p>Pour avoir testé Pi-Hole, je dois reconnaître qu&rsquo;il s&rsquo;agit là d&rsquo;une solution comme je les aime, à savoir hyper simple à installer, hyper simple à configurer, hyper simple à déployer et qui sont très souvent les plus efficaces qui puissent exister. Le tout servi, s&rsquo;il vous plait, avec une documentation bien fournie qui permette bien entendu d&rsquo;aller plus loin. </p>
+<p>Pour avoir testé Pi-Hole, je dois reconnaître qu&rsquo;il s&rsquo;agit là d&rsquo;une solution comme je les aime, à savoir hyper simple à installer, hyper simple à configcaptionr, hyper simple à déployer et qui sont très souvent les plus efficaces qui puissent exister. Le tout servi, s&rsquo;il vous plait, avec une documentation bien fournie qui permette bien entendu d&rsquo;aller plus loin. </p>
 <p>Voili, voilou, on ne change pas les bonnes habitudes, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis et évidemment à faire votre propre idée sur le sujet.</p>
 <p>D&rsquo;ici là, portez-vous bien, buvez de l&rsquo;eau car l&rsquo;eau c&rsquo;est la vie et à bientôt tout le monde !</p>
 <p><img src="https://i.imgur.com/bYJGrl5.jpg" /></p>
@@ -156,7 +156,7 @@ pi@raspberry:~ $ sudo pihole -a -p
 <h3>1°) Le matériel </h3>
 <blockquote><p>On ne fait pas d&rsquo;omelettes sans casser d’œufs mais encore faut-il en avoir !</p></blockquote>
 <p>Eh oui ! le matériel c&rsquo;est hyper important. En vérité pour les CTF, il n&rsquo;y a pas besoin non plus d&rsquo;une machine de guerre en terme de performances. Par exemple, lorsque je débutais, je me rappel de ce vieux Nec m320 qui datait de 2003 et qui pesait 5 Kg au moins et même si c&rsquo;était pas le grand luxe, j&rsquo;en ai quand même de super bons souvenirs avec.</p>
-<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/27550-ordinateur-portable-nec-1.jpg" alt="nec versa m320" width="450" height="600" class="alignnone size-full wp-image-1027" /><figure>Aaahh la belle époque des ordis portables qui faisaient le même poids qu&rsquo;un sac de patate :) </figure>Vous l&rsquo;aurez compris, ça ne sert pas à grand chose d&rsquo;investir dans des PC gamers à 2 000 € uniquement pour du CTF. On peut très bien recycler un vieil ordinateur pour commencer. </p>
+<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/27550-ordinateur-portable-nec-1.jpg" alt="nec versa m320" width="450" height="600" class="alignnone size-full wp-image-1027" /><figcaption>Aaahh la belle époque des ordis portables qui faisaient le même poids qu&rsquo;un sac de patate :) </figcaption>Vous l&rsquo;aurez compris, ça ne sert pas à grand chose d&rsquo;investir dans des PC gamers à 2 000 € uniquement pour du CTF. On peut très bien recycler un vieil ordinateur pour commencer. </p>
 <p>En revanche ce qu&rsquo;il faut IM-PÉ-RA-TI-VE-MENT c&rsquo;est un système d&rsquo;exploitation adéquat. Fini donc le Windows 10 ou même le Mac OS X ! Ce qu&rsquo;il faut c&rsquo;est du Linux 🐧</p>
 <p><img src="https://memegenerator.net/img/instances/61963857/linux-linux-everywhere.jpg" alt="linux everywhere" /></p>
 <p>Il y a en effet un bon panel de distributions Linux spécialisées dans la sécurité informatique ou le hacking mais mon petit top personnel reste le suivant: </p>
@@ -248,7 +248,7 @@ Du côté matériel par contre, le serveur est directement relié au routeur par
 
 
 
-<figure class="wp-block-image"><img src="https://www.numerama.com/content/uploads/2016/10/google-bloque.jpg" alt="" /><figure>Google.fr bloqué par Orange #nofake</figure></figure>
+<figure class="wp-block-image"><img src="https://www.numerama.com/content/uploads/2016/10/google-bloque.jpg" alt="" /><figcaption>Google.fr bloqué par Orange #nofake</figcaption></figure>
 
 
 
