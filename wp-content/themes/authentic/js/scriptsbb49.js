@@ -536,24 +536,24 @@
 					pinURL = imagehref;
 				}
 
-				if ( !( $( container ).closest( 'figcaption' ).length ) ) {
-					$( container ).wrap( '<figcaption class="pin-it-container"></figcaption>' );
+				if ( !( $( container ).closest( 'figure' ).length ) ) {
+					$( container ).wrap( '<figure class="pin-it-container"></figure>' );
 				}
 
 				container = $( container ).parent();
 
 			} else {
 
-				if ( !( $( container ).is( 'figcaption' ) || $( container ).closest( 'figcaption' ).length ) ) {
-					$( this ).wrap( '<figcaption class="pin-it-container"></figcaption>' );
+				if ( !( $( container ).is( 'figure' ) || $( container ).closest( 'figure' ).length ) ) {
+					$( this ).wrap( '<figure class="pin-it-container"></figure>' );
 				}
 
 				container = $( this ).parent();
 
 			}
 
-			if ( !$( this ).closest( 'figcaption' ).hasClass( 'pin-it-container' ) ) {
-				$( this ).closest( 'figcaption' ).addClass( 'pin-it-container' );
+			if ( !$( this ).closest( 'figure' ).hasClass( 'pin-it-container' ) ) {
+				$( this ).closest( 'figure' ).addClass( 'pin-it-container' );
 			}
 
 			if ( !pinURL ) {
@@ -567,18 +567,18 @@
 			pinURL = encodeURIComponent( pinURL );
 			postURL = encodeURIComponent( postURL );
 
-			var figcaption = container;
+			var figure = container;
 
-			if ( !$( container ).is( 'figcaption' ) ) {
-				figcaption = $( container ).closest( 'figcaption' );
+			if ( !$( container ).is( 'figure' ) ) {
+				figure = $( container ).closest( 'figure' );
 			}
 
 			// Get caption text.
-			var imgDescription = $( figcaption ).find( '.wp-caption-text' ).text();
+			var imgDescription = $( figure ).find( '.wp-caption-text' ).text();
 
 			if ( !imgDescription ) {
 				// Get image alt attribute if there's no caption.
-				imgDescription = $( figcaption ).find( 'img' ).attr( 'alt' );
+				imgDescription = $( figure ).find( 'img' ).attr( 'alt' );
 			}
 
 			if ( imgDescription ) {
@@ -592,13 +592,13 @@
 			imgClasses.forEach( function( el ) {
 				if ( $( container ).find( 'img' ).hasClass( el ) ) {
 					$( container ).find( 'img' ).removeClass( el );
-					$( container ).find( 'img' ).closest( 'figcaption' ).addClass( el );
+					$( container ).find( 'img' ).closest( 'figure' ).addClass( el );
 
-					// Add width to figcaption.
+					// Add width to figure.
 					var imgWidth = $( container ).find( 'img' ).attr( 'width' );
 
 					if ( parseInt( imgWidth ) !== 'NaN' ) {
-						$( container ).find( 'img' ).closest( 'figcaption' ).width( imgWidth );
+						$( container ).find( 'img' ).closest( 'figure' ).width( imgWidth );
 					}
 				}
 			} );
@@ -628,10 +628,10 @@
 
 		$( '.content, .post-media' ).imagesLoaded( function() {
 
-			// All figcaptions in the post content, except for galleries.
-			$( '.content img' ).not( '.gallery figcaption img' ).pinIt();
+			// All figures in the post content, except for galleries.
+			$( '.content img' ).not( '.gallery figure img' ).pinIt();
 
-			// All figcaptions in default galleries.
+			// All figures in default galleries.
 			$( '.gallery:not(.gallery-type-slider):not(.gallery-type-justified) img' ).pinIt();
 
 			// Figure in image post format in post media section in single posts.
@@ -666,7 +666,7 @@
 
 	function initLightBox() {
 
-		// All figcaptions in post content, except for any galleries.
+		// All figures in post content, except for any galleries.
 
 		$( '.lightbox-enabled .content img' ).not( '.gallery img' ).each( function() {
 
@@ -682,12 +682,12 @@
 				return;
 			}
 
-			if ( !( $( container ).closest( 'figcaption' ).length ) ) {
-				$( container ).wrap( '<figcaption class="lightbox-container"></figcaption>' );
+			if ( !( $( container ).closest( 'figure' ).length ) ) {
+				$( container ).wrap( '<figure class="lightbox-container"></figure>' );
 			}
 
-			if ( !$( container ).closest( 'figcaption' ).hasClass( 'lightbox-container' ) ) {
-				$( container ).closest( 'figcaption' ).addClass( 'lightbox-container' );
+			if ( !$( container ).closest( 'figure' ).hasClass( 'lightbox-container' ) ) {
+				$( container ).closest( 'figure' ).addClass( 'lightbox-container' );
 			}
 
 			// Img classes.
@@ -696,13 +696,13 @@
 			imgClasses.forEach( function( el ) {
 				if ( $( container ).find( 'img' ).hasClass( el ) ) {
 					$( container ).find( 'img' ).removeClass( el );
-					$( container ).find( 'img' ).closest( 'figcaption' ).addClass( el );
+					$( container ).find( 'img' ).closest( 'figure' ).addClass( el );
 
-					// Add width to figcaption.
+					// Add width to figure.
 					var imgWidth = $( container ).find( 'img' ).attr( 'width' );
 
 					if ( parseInt( imgWidth ) !== 'NaN' ) {
-						$( container ).find( 'img' ).closest( 'figcaption' ).width( imgWidth );
+						$( container ).find( 'img' ).closest( 'figure' ).width( imgWidth );
 					}
 				}
 			} );
@@ -723,15 +723,15 @@
 			} );
 		} );
 
-		// All figcaptions in grid and slider galleries.
+		// All figures in grid and slider galleries.
 
 		$( '.lightbox-enabled .gallery' ).not( '.gallery-type-justified' ).each( function() {
 			if ( $( this ).data( 'carousel-extra' ) && null !== $( this ).data( 'carousel-extra' ) ) {
 				return;
 			}
-			var href = $( 'figcaption a', this ).attr( 'href' );
+			var href = $( 'figure a', this ).attr( 'href' );
 			if ( href && href.match( /\.(gif|jpeg|jpg|png)/ ) ) {
-				$( 'figcaption a', this ).addClass( 'image-popup' );
+				$( 'figure a', this ).addClass( 'image-popup' );
 				$( this ).magnificPopup( {
 					delegate: '.image-popup',
 					type: 'image',
@@ -751,7 +751,7 @@
 			}
 		} );
 
-		// All figcaptions in tiled galleries.
+		// All figures in tiled galleries.
 
 		$( '.lightbox-enabled .tiled-gallery' ).each( function() {
 			if ( null !== $( this ).data( 'carousel-extra' ) ) {
@@ -781,7 +781,7 @@
 
 		// Figure in image post format in post media section in single posts.
 
-		$( '.lightbox-enabled.single-format-image .post-media figcaption > a, .lightbox-enabled.single-format-standard .post-media figcaption > a' ).addClass( 'image-popup' ).magnificPopup( {
+		$( '.lightbox-enabled.single-format-image .post-media figure > a, .lightbox-enabled.single-format-standard .post-media figure > a' ).addClass( 'image-popup' ).magnificPopup( {
 			type: 'image',
 			tClose: translation.close + '(Esc)',
 			tLoading: translation.loading,
@@ -1316,7 +1316,7 @@
 				margins: 10,
 				lastRow: 'justify',
 				rowHeight: rowHeight,
-				selector: 'figcaption',
+				selector: 'figure',
 				captions: true,
 				maxRowHeight: '200%',
 				cssAnimation: true,
@@ -1327,9 +1327,9 @@
 				}
 			} ).on( 'jg.complete', function( e ) {
 				$( '.pin-it-enabled' ).find( $( 'img', this ) ).pinIt();
-				var href = $( 'figcaption > a', this ).attr( 'href' );
+				var href = $( 'figure > a', this ).attr( 'href' );
 				if ( href && href.match( /\.(gif|jpeg|jpg|png)/ ) ) {
-					$( 'figcaption > a', this ).addClass( 'image-popup' );
+					$( 'figure > a', this ).addClass( 'image-popup' );
 					$( this ).magnificPopup( {
 						delegate: '.image-popup',
 						type: 'image',

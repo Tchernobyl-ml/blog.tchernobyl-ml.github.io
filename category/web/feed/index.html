@@ -43,7 +43,7 @@
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&#8217;est très simple, je ne&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/diy/pi-hole-ou-comment-mettre-adblock-sur-tout-un-reseau/" class="btn btn-primary btn-effect btn-lg"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Est-ce que vous utilisez Adblock, Ublock ou tout autre extension pour bloquer les pubs ? En ce qui me concerne, oui. C&rsquo;est très simple, je ne peux tout simplement pas utiliser un navigateur si je n&rsquo;ai pas de bloqueur de pub d&rsquo;installé !</p>
-<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figcaption>Un meme qui explique bien ma situation 🤠</figcaption>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
+<p><img src="https://i.imgur.com/ynmzKmA.jpg" style="width: 50%;height: 50%" /><figure>Un meme qui explique bien ma situation 🤠</figure>Le souci avec ce genre d&rsquo;extensions, c&rsquo;est qu&rsquo;elles consomment beaucoup de ressources processeur / mémoire en plus de devoir être installées sur le navigateur en question pour fonctionner. Alors oui, je sais, il existe des navigateurs avec des bloqueurs de pub intégrés mais parfois, on a juste ni le choix du navigateur, ni la possibilité d&rsquo;installer une extension. </p>
 <p>Parfois, on aimerait juste que ça fonctionne, comme ça, naturellement, sans n&rsquo;avoir rien à faire et ça, sur tous les appareils de la maison ou du bureau (« out-of-the-box » comme diront les plus anglophones 🤠 ).</p>
 <p>Si vous pensez comme moi, alors vous êtes à la bonne adresse, car aujourd&rsquo;hui, je vous propose ce petit tuto <a href="https://blog.tchernobyl.ml/category/diy/">DIY</a> afin d&rsquo;en finir définitivement avec les pubs chez vous ou à votre lieu de travail.</p>
 <h3>Ingrédients : </h3>
@@ -51,7 +51,7 @@
 &#8211; une carte SD, à la base je n&rsquo;en ai pas vraiment besoin vu l&rsquo;installation que j&rsquo;ai (<a href="https://blog.tchernobyl.ml/diy/tchernobyl-ml-un-raspberry-pi-et-ca-repart/" rel="noopener noreferrer" target="_blank">ici</a>)mais une carte SD de 4 Go devrait être largement suffisante.<br />
 &#8211; une alimentation usb (si vous n&rsquo;avez pas l&rsquo;alimentation officielle sous la main, votre chargeur *<strong>USB</strong>* de téléphone fait largement l&rsquo;affaire)<br />
 &#8211; une distribution Linux, la plus plébiscité sur Raspberry Pi étant Raspbian, on prendra Rapsbian, mais n&rsquo;importe quel distrib fait l&rsquo;affaire !<br />
-&#8211; un autre ordinateur (pour configcaptionr notre framboise)</p>
+&#8211; un autre ordinateur (pour configurer notre framboise)</p>
 <h3>Préparer le terrain : </h3>
 <p>Normalement, quand vous sortez du carton votre Raspberry Pi, il n&rsquo;y a rien d&rsquo;installé, courrez donc brancher votre carte SD dans le lecteur de carte SD de votre autre ordinateur afin d&rsquo;installer Raspbian sur la carte comme précisé sur ce petit <a href="https://blog.tchernobyl.ml/diy/etcher-ou-rendre-une-usb-bootable-sur-linux-mac-os-ou-meme-windows/">tuto</a> </p>
 <p>Après cela, on s&#8217;empresse d&rsquo;activer le service SSH de notre Raspberry Pi en allant dans la partition boot (et non le dossier /boot à la racine). Une fois qu&rsquo;on est dans la bonne partition, on crée simplement un fichier vide nommé « ssh ».</p>
@@ -61,7 +61,7 @@ ssh pi@[ADRESSE_LOCALE_RASPBERRY]
 </pre>
 <p>puis en mot en de passe : « raspberry »</p>
 <p>ou via Putty pour les plus Windowsiens</p>
-<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figcaption>on met l&rsquo;IP du Raspberry dans le champ IP</figcaption><img src="https://i.imgur.com/e4pV7nU.png" /><figcaption>puis on met le mot de passe 🤠 </figcaption>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
+<p><img src="https://i.imgur.com/YJJ5KN3.png" /><figure>on met l&rsquo;IP du Raspberry dans le champ IP</figure><img src="https://i.imgur.com/e4pV7nU.png" /><figure>puis on met le mot de passe 🤠 </figure>Une fois qu&rsquo;on a le contrôle du RPI, on change au moins le mot de passe de l&rsquo;utilisateur par défaut (en attendant l&rsquo;article qui va bien) à l&rsquo;aide de la commande :</p>
 <pre>
 pi@raspberry:~ $ passwd
 Mot de passe actuel : "raspberry"
@@ -74,7 +74,7 @@ Confirmation du mot de passe : [le même mot de passe que précédement entré �
 pi@raspberry:~ $ curl -sSL https://install.pi-hole.net | bash
 </pre>
 <p>le script devrait se lancer :</p>
-<p><img src="https://i.imgur.com/rHChPdC.png" /><figcaption>cette framboise&#8230; 😍</figcaption>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
+<p><img src="https://i.imgur.com/rHChPdC.png" /><figure>cette framboise&#8230; 😍</figure>On déroule le script d&rsquo;installation en naviguant avec les touches directionnelles du clavier jusqu&rsquo;à cette étape qui est selon moi la plus importante. Ceux qui auront lu mon article sur les <a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">DNS</a> (<a href="https://blog.tchernobyl.ml/diy/les-dns-ou-comment-reprendre-le-controle-sur-sa-vie-privee-une-etape-a-la-fois/" rel="noopener noreferrer" target="_blank">ici</a>) sauront quoi choisir en DNS 🤠<br />
 <img src="https://i.imgur.com/wnfcdov.png" /></p>
 <p>Une fois l&rsquo;installation terminée, l&rsquo;adresse d&rsquo;une page d&rsquo;administration ainsi que votre mot de passe pour y accéder vous sont donnés, retenez le mot de passe ! Si vous préférez un autre mot de passe, vous pouvez toujours le changez via la commande : </p>
 <pre>
@@ -82,14 +82,14 @@ pi@raspberry:~ $ sudo pihole -a -p
 </pre>
 <p>Une fois que tout est bien configuré on vérifie juste que la page d&rsquo;administration fonctionne, si tout se passe bien vous devriez avoir affaire à une page semblable à celle-ci : </p>
 <p><img src="https://i.imgur.com/s6aW8Yq.png" /></p>
-<p>À partir de là, vous pourrez configcaptionr Pi-Hole à votre guise afin d&rsquo;y mettre des réglages plus fin si vous le souhaitez. L&rsquo;avantage avec cet outil, c&rsquo;est qu&rsquo;on peut maintenant tout superviser et potentiellement tout bloquer, faites donc attention à ne pas faire vivre à votre entourage une mini NSA domestique ou un Big Brother en puissance ! ☹️</p>
-<p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figcaption>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figcaption>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
+<p>À partir de là, vous pourrez configurer Pi-Hole à votre guise afin d&rsquo;y mettre des réglages plus fin si vous le souhaitez. L&rsquo;avantage avec cet outil, c&rsquo;est qu&rsquo;on peut maintenant tout superviser et potentiellement tout bloquer, faites donc attention à ne pas faire vivre à votre entourage une mini NSA domestique ou un Big Brother en puissance ! ☹️</p>
+<p><img src="https://i.imgur.com/ugsFtdq.jpg" /><figure>Voilà typiquement l&rsquo;exemple à ne pas suivre 😥 </figure>À partir de maintenant, vous faites comme vous le sentez ! En effet, vous avez trois choix de déploiement :</p>
 <p>&#8211; La manière douce, en changeant l&rsquo;adresse IP du serveur DNS de votre Box internet par celle de votre Raspberry et ainsi en mettant la configuration DNS de tous les autres appareils par défaut (comme ça, les appareils récupèrent automatique l&rsquo;adresse DNS du Raspberry).</p>
 <p>&#8211; La manière fine (ou « cas par cas »), en changeant l&rsquo;adresse IP du serveur DNS de chaque machine que vous souhaitez « libérer » des pubs.</p>
 <p>&#8211; La manière radicale, désactiver DHCP de votre Box internet et laisser le Raspberry tout faire tout seul via le serveur DHCP intégré. </p>
 <p>Les trois méthodes fonctionnent bien entendu tout aussi bien, vous faîtes vraiment comme vous le sentez. Personnellement j&rsquo;ai une préférence pour la manière douce, car c&rsquo;est celle qui est selon moi la moins casse-tête. Par exemple, si vous achetez un nouvel appareil, aucune configuration n&rsquo;est requise pour cet appareil, car il récupère automatiquement l&rsquo;adresse du Raspberry via votre Box internet.</p>
 <h3>Verdict </h3>
-<p>Pour avoir testé Pi-Hole, je dois reconnaître qu&rsquo;il s&rsquo;agit là d&rsquo;une solution comme je les aime, à savoir hyper simple à installer, hyper simple à configcaptionr, hyper simple à déployer et qui sont très souvent les plus efficaces qui puissent exister. Le tout servi, s&rsquo;il vous plait, avec une documentation bien fournie qui permette bien entendu d&rsquo;aller plus loin. </p>
+<p>Pour avoir testé Pi-Hole, je dois reconnaître qu&rsquo;il s&rsquo;agit là d&rsquo;une solution comme je les aime, à savoir hyper simple à installer, hyper simple à configurer, hyper simple à déployer et qui sont très souvent les plus efficaces qui puissent exister. Le tout servi, s&rsquo;il vous plait, avec une documentation bien fournie qui permette bien entendu d&rsquo;aller plus loin. </p>
 <p>Voili, voilou, on ne change pas les bonnes habitudes, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis et évidemment à faire votre propre idée sur le sujet.</p>
 <p>D&rsquo;ici là, portez-vous bien, buvez de l&rsquo;eau car l&rsquo;eau c&rsquo;est la vie et à bientôt tout le monde !</p>
 <p><img src="https://i.imgur.com/bYJGrl5.jpg" /></p>
@@ -125,7 +125,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>S&rsquo;il s&rsquo;agit de l&rsquo;image en HTTP, cela peut vouloir dire que votre FAI prends un malin plaisir à manipuler les images afin de réduire leur taille (et bafoue au passage le principe de neutralité du net 😠).</p>
 <p><img src="https://media.giphy.com/media/1236TCtX5dsGEo/giphy.gif" alt="Bravo!"></p>
 <p>Si en revanche il s&rsquo;agit de l&rsquo;image en HTTPS, alors courez vite débrancher / rebrancher votre Box internet et refaites le test car c&rsquo;est sûrement le signe qu&rsquo;on écoute votre connexion internet 😰 !!!</p>
-<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figcaption>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figcaption>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
+<p><img src="https://media.giphy.com/media/xT39D0tJm471uhvhaU/giphy.gif" alt="AV"><figure>C&rsquo;est ce qui s&rsquo;appelle un bon « Firewall » 🤠</figure>En ce qui me concerne, je me suis fait un petit script qui m&rsquo;a donné ce résultat :</p>
 <pre>
 [✓] IMAGE_HTTP:     43 225
 |✓] IMAGE_HTTPS:    43 225
@@ -133,7 +133,7 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 [✓] Le FAI est neutre !
 
 </pre>
-<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figcaption>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figcaption>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
+<p><img src="https://media.giphy.com/media/26tPo1I4XyWzIBjFe/giphy.gif" alt="content"><figure>Oui, j&rsquo;ai dansé comme ça dans ma chambre 🤠 </figure>J&rsquo;ai écrit le petit script en Shell, car honnêtement je ne connais pas plus léger et plus facile à faire pour tout ce qui est Linux / Mac OS&#8230; Sachez néanmoins que si par malheur vous êtes l&rsquo; « heureux » «  »possesseur » » d&rsquo;un Windows, ou juste que vous voulez me voir coder un script pour ce magnifique et très beau système d&rsquo;exploitation #sarcasme n&rsquo;hésitez pas à me le faire savoir, je serais ravi de rendre service (ça sera l&rsquo;occasion de faire un dépôt Github pour le blog) !</p>
 <p>Voili, voilou, j&rsquo;espère que cet article vous a plus, n&rsquo;hésitez pas à le partager avec vos collègues ou vos amis pour qu&rsquo;on connaisse un peu l&rsquo;état des lieux de la neutralité du net en Europe (ou ailleurs !) en 2019. Ça peut être aussi une très belle occasion pour prendre conscience de la sûreté de sa connexion (surtout si on se rend compte qu&rsquo;on est sur écoute !).</p>
 <p>d&rsquo;ici là portez vous bien, buvez de l&rsquo;eau et à bientôt tout le monde !</p>
 <p><img src="https://i.imgur.com/ehlPHlP.jpg" alt="neutralité"></p>
@@ -159,8 +159,8 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>Lorsque l&rsquo;on parle d&rsquo;invasions extraterrestres, un des premiers films qui me vient en tête c&rsquo;est Independance Day. Dans ce film, les humains sont confrontés à une invasion massive de vilains aliens.</p>
 <p>Même s&rsquo;ils ont essayé de lutter, ils ne faisaient clairement pas le poids contre une civilisation alien nettement plus avancée technologiquement. C&rsquo;est alors qu&rsquo;à un moment, étant fatigués d&rsquo;essayer de détruire un à un les vilains vaisseaux aliens, un informaticien dans le film a carrément l&rsquo;idée de détruire le vaisseau mère à l&rsquo;aide d&rsquo;un virus informatique ainsi que d&rsquo;une ogive nucléaire (le virus visant à créer une attaque informatique de grande ampleur sur les vaisseaux sur Terre et l&rsquo;ogive, à mettre H.S le vaisseau mère).<br />
 </p>
-<figcaption>
-    <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figcaption style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figcaption></figcaption>
+<figure>
+    <img src='https://media.giphy.com/media/3o6gE2qaKdNm3diaFa/giphy.gif' alt='missing' /><figure style="font-size:0.85em">On constate effectivement de légères lacunes technologiques pour les humains</figure></figure>
 <p></p>
 <p>C&rsquo;est à ce moment-là que je vois venir les hordes de semi-questions du type: « Je ne vois pas le rapport avec le titre de l&rsquo;article ? »</p>
 <p>Comme j&rsquo;aime troller, je vais vous répondre par une question simple (oui oui, répondre par une question 🤠 ) :</p>
@@ -174,9 +174,9 @@ La neutralité du Net ou la neutralité du réseau est un principe devant garant
 <p>Pour moi, cette idée est le but final du fameux Hacking Ethique. En effet, aujourd&rsquo;hui l&rsquo;Ethical Hacking comme aiment bien l&rsquo;appeler nos amis anglo-saxons, ne se limite pricipalement qu&rsquo;au remontées de failles.</p>
 <p>Or je trouve assez triste de me dire que la seule chose d&rsquo;éthique dans le hacking c&rsquo;est de remonter des failles. Sérieusement, on en fait quoi du fait de délivrer des miliers d&rsquo;ordinateurs de quelqu&rsquo;un qui se croit tout permis ? On en fait quoi de nos serveurs qui cèdent à la barbarie du minage de cryptomonnaie ou encore de ces jeunes collégiens qui, guidés par des tutos, se mettent à télécharger des logiciels infectés en pensant qu&rsquo;ils vont devenirs de gros caïds 2.0 pleins aux as (cf. <a href="https://blog.tchernobyl.ml/systeme/les-r-a-t-ou-les-pires-arnaques-du-web/">ici</a>)</p>
 <p></p>
-<figcaption>
+<figure>
     <img src='https://media.giphy.com/media/8xgqLTTgWqHWU/giphy.gif' alt='missing' /><br />
-</figcaption>
+</figure>
 <p></p>
 <p>Honnêtement, j&rsquo;adorerais tellement voir un jour, un état mettre en place de VRAIS fondements au hacking éthique.<br />
 Je pense que ça pourrait avoir de grosses répercussions sociétales. En effet, ça pourrait changer l&rsquo;image de voleur 2.0 inhérente au hacker et on pourrait même voir apparaître un phénomène de mode non plus de vidéos ou d&rsquo;articles sur comment attaquer de pauvres ordinateurs mais plutôt sur comment identifier un botnet et le remonter aux autorités.</p>
@@ -341,7 +341,7 @@ http://2019.ip138.com/ic.asp 117.25.157.119 ----&gt; Contrôle et Commande (SERV
 
 
 
-<div class="wp-block-image"><figcaption class="aligncenter"><img src="https://addons.cdn.mozilla.net/user-media/previews/full/197/197833.png?modified=1530209574" alt="" /></figcaption></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://addons.cdn.mozilla.net/user-media/previews/full/197/197833.png?modified=1530209574" alt="" /></figure></div>
 
 
 
