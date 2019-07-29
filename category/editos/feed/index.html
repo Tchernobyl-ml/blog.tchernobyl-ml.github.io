@@ -63,7 +63,7 @@ En effet, entre ma recherche d&rsquo;alternance et la tonne de projets que j&rsq
 				<description><![CDATA[<div class="post-excerpt">Coucou tout le monde, Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? Si vous avez répondu à haute voix (ou&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/drama-alert/enquete-campagne-russe-de-phishing-via-sms-sur-leboncoin/" class="btn btn-primary btn-effect"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Coucou tout le monde, </p>
 <p>Si je vous dis: campagne de phishing massive, botnet russe, AndroidBanker et Leboncoin vous me répondez quoi ? </p>
-<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille :)</p>
+<p>Si vous avez répondu à haute voix (ou pas) « ARTICLE BIEN JUTEUX !!! » alors vous l&rsquo;avez dans le mille 🤠</p>
 <p>Internet est vaste et rempli de tous pleins de mystères. Et c&rsquo;est justement ce côté mystérieux qui me passionne. Vous comprenez donc que lorsque l&rsquo;on me tend un billet express pour découvrir les coulisses d&rsquo;une attaque (surtout comme celle-ci) je ne réfléchis pas deux fois !</p>
 <h3>1°) Le Contexte</h3>
 <p>Récement un de mes amis qui avait mis en vente un objet sur le leboncoin avait reçu un SMS lui notifiant qu&rsquo;il avait bien reçu le prépaiement de l&rsquo;objet en question.</p>
@@ -79,13 +79,13 @@ En effet, entre ma recherche d&rsquo;alternance et la tonne de projets que j&rsq
 <p> <img src="https://img1.koplayer.com/ScreenShot/com.antivirus/corwdYPO6EJ0GSM0-KSfKDDvF6aleCuEP93xqz2MryFdh7A3dKbupAcbMfoTZnKQ3jxc_50.png" /> </p>
 <p>Eh oui! Bien que troublante d&rsquo;ingéniosité sur de nombreux points, cette campagne tombe à l&rsquo;eau car nombreux sont à avoir reçu la notif mais peu sont allé juqu&rsquo;à tout faire pour avoir le petit fichier .apk installé sur leur téléphone.</p>
 <h3>2°) La charge utile (le fichier .apk)</h3>
-<p>Le fichier est très léger (pour une application :) ), pas plus de 300 Ko.<br />
+<p>Le fichier est très léger (pour une application 🤠 ), pas plus de 300 Ko.<br />
 Dès son execution, la fausse appli va se connecter au faux site afin que la victime puisse entrer ses coordonnées bancaires (bye bye les sous-sous).<br />
 Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Commande (C2C) va s&rsquo;opérer et via un fichier « gate.php », le serveur donne au zombie une sorte de mutex (en gros un identifiant, ex: 543759810537698240). </p>
 <p>Et c&rsquo;est là, que ça devient marrant: </p>
 <p>Les auteurs semblent avoir initialement prévu de s&rsquo;occuper d&rsquo;un botnet android via HTTP totalement soumis et dévoué à son C2C (serveur de Contrôle et de Commande). Le truc, c&rsquo;est que sur Android, il n&rsquo;y a pas vraiment de véritables moyens de persistance comme sur d&rsquo;autres systèmes :( . </p>
 <p>Par exemple, la permission d&rsquo;exécution en arrière-plan est choisie par l&rsquo;utilisateur lors de l&rsquo;installation et même si elle est activée, rien ne garantie que le démon (le service de l&rsquo;application) va bien se lancer de manière autonome après un redémarrage du téléphone. </p>
-<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri :) ) </p>
+<p>Sans parler du fait qu&rsquo;un téléphone portable reste rarement au même endroit (logique en même temps) et que du coup Internet ne va pas forcément fonctionner tout le temps (surtout si la victime est un prolétaire avec un forfait Internet tout pourri 🤠 ) </p>
 <p>Mais ne vous en faites pas, de ce côté les auteurs ont eu une idée de génie pour propager le malware (si si vraiment). Aller je vous donne un indice, voici les permissions que la fausse application demande au moment de l&rsquo;installation:</p>
 <pre>
     android.permission.CALL_PHONE          
@@ -122,7 +122,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <ul>
 <li>TOUS les virus ayant un lien avec cette organisation sont détectés par une vaste majorité d&rsquo;antivirus</li>
 <li>Les certificats sont auto-signés à l&rsquo;arrache (Ex: « CN:dddddddd fdfd » pour la backdoor leboncoin) alors qu&rsquo;ils ont des milliers de domaines</li>
-<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là :) </li>
+<li>Les auteurs ne ciblent *exclusivement* que deux plateformes: Windows et Android, à croire qu&rsquo;ils ne connaissent que ces deux-là 🤠 </li>
 <li>Certains codes sont des copiés collés de code retrouvé sur Github, Pastebin ou même StackOverflow (les crédits en moins)</li>
 <li>Il est très facile de remonter à leur serveur de Contrôle et de Commande </li>
 <li>Certains de leurs virus sont de véritables « call center » avec plus d&rsquo;une centaine d&rsquo;addresses IP différentes contactées dès les premières secondes de l&rsquo;exécution</li>
@@ -143,7 +143,7 @@ Une fois cela fait, une connexion directe avec le serveur de Contrôle et de Com
 <p>En cherchant un peu on a même réussi à trouver une véritable vulnérabilité en or massif qui nous a permis de confirmer qu&rsquo;il s&rsquo;agissait d&rsquo;une solution totalement custom. Pour la petite histoire on a d&rsquo;ailleurs retrouvé des traces de précédentes installations (test ?) non fonctionnelles sur deux sites compromis d&rsquo;entreprises (1 américaine et 1 indienne).</p>
 <h3>3°) Verdict </h3>
 <p>Cette attaque a sur le papier largement de quoi effrayer de par sa sophistication (copie conforme des codes graphiques leboncoin, utilisation de la nouvelle fonctionnalité de prépaiement comme prétexte pour le phishing, relai SMS des victimes pour propager le malware &#8230;). Cependant, dans les faits, l&rsquo;attaque n&rsquo;ébranle pas forcément voire carrément pas du tout la communauté leboncoin.</p>
-<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas :) </p>
+<p>Honnêtement j&rsquo;ai presque de la peine pour les auteurs lorsque je vois toutes les bonnes idées et tous les efforts qu&rsquo;ils ont fournis en créant leurs propres trucs de A à Z mais que pas de bol, le truc à totalement bidé. Comme quoi, le crime ne paie pas 🤠 </p>
 <p><u>TELEX:</u> en guise de contre-mesure simple mais efficace, pensez seulement à être plus attentif aux liens avant de cliquer directement.</p>
 <h3>Bonus: IOC&rsquo;s de la campagne </h3>
 <pre>
@@ -265,8 +265,8 @@ hxxp://arbeit.jobs-hegele[.]in
 <p>Coucou la compagnie,</p>
 <p>Je ne sais pas si ce dicton ne se cantonne qu&rsquo;au temps qu&rsquo;il fait dehors mais en ce qui me concerne, entre les candidatures, les concours, les entretiens&#8230; sans compter les soucis d&rsquo;optimisations concernant le site, ce n&rsquo;est qu&rsquo;à partir de maintenant que j&rsquo;ai enfin un peu de temps devant moi. </p>
 <p>C&rsquo;est d&rsquo;ailleurs pour ça que j&rsquo;ai lancé la mini-série « <a href="https://blog.tchernobyl.ml/category/malware-hunting/" rel="noopener noreferrer" target="_blank">Malware Hunting</a> » qui est même carrément devenue une catégorie sur le blog tellement il y a de choses à dire. </p>
-<p>J&rsquo;ai aussi totalement retravaillé l&rsquo;aspect du blog (mais pas que :) ). Sans vouloir me jetter des fleurs, le site marie maintenant à la perfection optimisation, rapidité et esthétique en somme une vrai Furtive GT.</p>
-<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/1478735.jpg" alt="ma &quot;Future&quot; voiture" width="620" height="465" class="alignnone size-full wp-image-1014" /><figcaption>Cocoricoo :)</figcaption>Merci aussi d&rsquo;être toujours aussi nombreux, ça me fait réellement super plaisir. N&rsquo;hésitez surtout pas à me donner votre avis ou même des idées d&rsquo;articles.</p>
+<p>J&rsquo;ai aussi totalement retravaillé l&rsquo;aspect du blog (mais pas que 🤠 ). Sans vouloir me jetter des fleurs, le site marie maintenant à la perfection optimisation, rapidité et esthétique en somme une vrai Furtive GT.</p>
+<p><img src="https://blog.tchernobyl.ml/wp-content/uploads/2019/05/1478735.jpg" alt="ma &quot;Future&quot; voiture" width="620" height="465" class="alignnone size-full wp-image-1014" /><figcaption>Cocoricoo 🤠</figcaption>Merci aussi d&rsquo;être toujours aussi nombreux, ça me fait réellement super plaisir. N&rsquo;hésitez surtout pas à me donner votre avis ou même des idées d&rsquo;articles.</p>
 <p>À bientôt pour de nouveaux articles les margoulins !</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://blog.tchernobyl.ml/editos/edito-de-mai/feed/</wfw:commentRss>
@@ -284,7 +284,7 @@ hxxp://arbeit.jobs-hegele[.]in
 				<description><![CDATA[<div class="post-excerpt">Bonjour à toutes et à tous ! J&#8217;espère que vous allez bien, pour ma part, je n&#8217;ai pas vu le mois de mars passer. Il s&#8217;est déroulé tellement de choses&#8230;</div><div class="post-more"><a href="https://blog.tchernobyl.ml/editos/edito-davril-les-affaires-reprennent/" class="btn btn-primary btn-effect"><span>Lire l&#039;Article</span><span><i class="icon icon-arrow-right"></i></span></a></div>]]></description>
 								<content:encoded><![CDATA[<p>Bonjour à toutes et à tous !</p>
 <p>J&rsquo;espère que vous allez bien, pour ma part, je n&rsquo;ai pas vu le mois de mars passer. Il s&rsquo;est déroulé tellement de choses en tellement peu de temps qu&rsquo;il a dû se produire une distorsion de l&rsquo;espace temps ou au moins quelque chose du genre !</p>
-<p>Plus sérieusement ça a été un mois chargé en concours et en entretiens et je reconnais avoir un peu mis de côté le blog. J&rsquo;ai hâte d&rsquo;écrire tout pleins de nouveaux articles et puis j&rsquo;ai pleins d&rsquo;idées (je n&rsquo;en dit pas plus :) )</p>
+<p>Plus sérieusement ça a été un mois chargé en concours et en entretiens et je reconnais avoir un peu mis de côté le blog. J&rsquo;ai hâte d&rsquo;écrire tout pleins de nouveaux articles et puis j&rsquo;ai pleins d&rsquo;idées (je n&rsquo;en dit pas plus 🤠 )</p>
 <p>À bientôt les margoulins !</p>
 <p><img src="https://media.giphy.com/media/h0gzUb0Wh1RIY/giphy.gif" alt="content" />~Tchernobyl</p>
 ]]></content:encoded>
